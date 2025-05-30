@@ -1,6 +1,11 @@
+# 强制所有文本文件用 LF
+* text=auto eol=lf
+
+# 强制 CSS、HTML、JS、Markdown 等常见格式用 LF
 *.css text eol=lf
-*.js  text eol=lf
 *.html text eol=lf
+*.js text eol=lf
+*.md text eol=lf
 *.jpg binary
 *.png binary
 *.ico binary
