@@ -2,16 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>My Wild Diary</title>
-    <link>https://yunpeng-wang.github.io/myblog/</link>
+    <link>http://localhost:1313/myblog/</link>
     <description>Recent content on My Wild Diary</description>
     <generator>Hugo -- 0.147.6</generator>
     <language>en-us</language>
-    <atom:link href="https://yunpeng-wang.github.io/myblog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 May 2025 12:30:16 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/myblog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/myblog/about/</link>
+      <pubDate>Fri, 30 May 2025 12:30:16 +0900</pubDate>
+      <guid>http://localhost:1313/myblog/about/</guid>
+      <description>&lt;p&gt;你好！我是一名野生动物摄影爱好者。&lt;/p&gt;
+&lt;p&gt;这个博客用来记录我拍摄的一些瞬间，也作为一个长期的摄影笔记。&lt;/p&gt;</description>
+    </item>
     <item>
       <title></title>
-      <link>https://yunpeng-wang.github.io/myblog/posts/2025-04-30/</link>
+      <link>http://localhost:1313/myblog/posts/2025-04-30/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yunpeng-wang.github.io/myblog/posts/2025-04-30/</guid>
+      <guid>http://localhost:1313/myblog/posts/2025-04-30/</guid>
       <description>&lt;h1 id=&#34;第一篇日志前言&#34;&gt;第一篇日志·前言&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;2025.04.30｜深圳&lt;/p&gt;&lt;/blockquote&gt;
