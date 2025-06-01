@@ -45,7 +45,7 @@ body.dark .post-card {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 120px;
+  max-width: 100px;
   overflow: hidden;
   border-radius: 8px;
 }
