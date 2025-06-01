@@ -36,14 +36,16 @@ body.dark .post-card {
 .post-card-inner {
   display: flex;
   gap: 1rem;
-  align-items: flex-start;
+  align-items: center;
   padding: 1rem;
 }
 
 .post-card-image {
   flex-shrink: 0;
-  width: 120px;
-  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 120px;
   overflow: hidden;
   border-radius: 8px;
 }
@@ -57,6 +59,7 @@ body.dark .post-card {
 
 .post-card-content {
   flex: 1;
+  align-items: center;
 }
 
 .post-card-title {
@@ -83,5 +86,81 @@ body.dark .post-card {
 .post-description {
   font-size: 1rem;
   color: var(--pdescription-color, #444);
+  margin-top: 0.5rem;
+}
+
+/* 图片基础样式 */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* 居中显示的图片 */
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* 靠左浮动的图片 */
+.img-left {
+  float: left;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* 靠右浮动的图片 */
+.img-right {
+  float: right;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* 多图横排容器 */
+.img-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+/* 图片带细边框 */
+.img-bordered {
+  border: 1px solid var(--gray-300, #ccc);
+  padding: 4px;
+  background-color: #fff;
+}
+
+/* 半宽度图片，适合两张并排 */
+.img-half {
+  width: 48%;
+}
+
+/* 小标题风格的图（例如笔记截图） */
+.img-note {
+  width: 100%;
+  border-left: 4px solid var(--primary, #007acc);
+  padding-left: 0.5rem;
+  margin: 1rem 0;
+}
+
+/* 全宽横幅图（如大横图） */
+.img-banner {
+  width: 100%;
+  margin: 1.5rem 0;
+  border-radius: 0;
+}
+
+/* 图片下说明文字（需搭配 figure） */
+figcaption {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--gray-600, #666);
   margin-top: 0.5rem;
 }
