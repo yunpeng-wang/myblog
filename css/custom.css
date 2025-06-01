@@ -95,7 +95,7 @@ body.dark .post-card {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 100px;
+    width: 100%;
     height: 150px; /* 自定义你想要的竖图高度 */
     overflow: hidden;
   }
