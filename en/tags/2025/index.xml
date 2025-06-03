@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>2025 on My Wild Diary</title>
+    <link>https://yunpeng-wang.github.io/myblog/en/tags/2025/</link>
+    <description>Recent content in 2025 on My Wild Diary</description>
+    <generator>Hugo -- 0.147.6</generator>
+    <language>en</language>
+    <copyright>Yunpeng Wang. All content on this site is © the author unless otherwise stated.</copyright>
+    <lastBuildDate>Sun, 27 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yunpeng-wang.github.io/myblog/en/tags/2025/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Birding in Shenzhen·2nd Day</title>
+      <link>https://yunpeng-wang.github.io/myblog/en/posts/2025-04-27/</link>
+      <pubDate>Sun, 27 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://yunpeng-wang.github.io/myblog/en/posts/2025-04-27/</guid>
+      <description>Mangrove Coastal Eco-Park</description>
+    </item>
+    <item>
+      <title>Birding in Shenzhen·1st Day</title>
+      <link>https://yunpeng-wang.github.io/myblog/en/posts/2025-04-26/</link>
+      <pubDate>Sat, 26 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://yunpeng-wang.github.io/myblog/en/posts/2025-04-26/</guid>
+      <description>Wild Moments in Shenzhen&amp;rsquo;s Talent Park</description>
+    </item>
+  </channel>
+</rss>

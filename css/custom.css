@@ -234,4 +234,10 @@ figcaption {
     max-width: 100%;
     align-items: center; /* 👈 关键：限制 figcaption 不要横向撑满 */
   }
+
+  img.img-half {
+    width: 33%;
+    height: auto;
+    display: block;
+  }
 }

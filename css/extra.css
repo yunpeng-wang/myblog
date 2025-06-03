@@ -53,7 +53,7 @@
   }
 
   /* 可选：让 hover 在移动端失效（移动端没 hover） */
-  .gpost-content a.glightbox:hover img.zoom-img {
+  .gpost-content img.zoom-img:hover {
     transform: none;
   }
 }
