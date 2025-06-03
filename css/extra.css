@@ -48,7 +48,7 @@
   }
 
   .gpost-content img.zoom-img {
-    transition: transform 0.2s ease-in-out;
+    transition: none;
     transform: none !important; /* ✅ 确保在移动端禁用 hover 缩放（可选） */
   }
 
