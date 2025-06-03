@@ -85,6 +85,19 @@
                 href="https://yunpeng-wang.github.io/myblog/en/posts/"
                 />
   </url><url>
+    <loc>https://yunpeng-wang.github.io/myblog/en/gallery/</loc>
+    <lastmod>2025-04-26T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yunpeng-wang.github.io/myblog/zh/gallery/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yunpeng-wang.github.io/myblog/en/gallery/"
+                />
+  </url><url>
     <loc>https://yunpeng-wang.github.io/myblog/en/tags/shenzhen/</loc>
     <lastmod>2025-04-26T00:00:00+00:00</lastmod>
   </url><url>
@@ -110,18 +123,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://yunpeng-wang.github.io/myblog/en/categories/"
-                />
-  </url><url>
-    <loc>https://yunpeng-wang.github.io/myblog/en/gallery/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://yunpeng-wang.github.io/myblog/zh/gallery/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yunpeng-wang.github.io/myblog/en/gallery/"
                 />
   </url><url>
     <loc>https://yunpeng-wang.github.io/myblog/en/search/</loc>
