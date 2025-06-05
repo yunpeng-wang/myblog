@@ -1,0 +1,61 @@
+/* Gallery 主容器：自动排布图片，一行几个自动算 */
+.gpost-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 6px;
+}
+
+/* 包裹图片的 a 标签，glightbox 用 */
+.gpost-content a.glightbox {
+  aspect-ratio: 4 / 3;
+  display: flex;
+  overflow: hidden;
+  align-items: center;     /* 垂直方向居中 */
+  justify-content: center; /* 水平方向居中 */
+  position: relative;
+  text-decoration: none;
+  border: none;
+  box-shadow: 0 0 0px; 
+  border-radius: 8px;
+}
+
+/* 图片样式 */
+.gpost-content img.zoom-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: zoom-in;
+  object-fit: cover;
+}
+
+/* Hover 缩放 */
+.gpost-content img.zoom-img:hover {
+  transform: scale(1.5);
+  position: relative;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 576px) {
+  .gpost-content {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 6px;
+  }
+
+  .gpost-content a.glightbox {
+    aspect-ratio: 4 / 3;
+  }
+
+  .gpost-content img.zoom-img {
+    transition: none;
+    transform: none !important; /* ✅ 确保在移动端禁用 hover 缩放（可选） */
+    animation: none;
+  }
+
+  /* 可选：让 hover 在移动端失效（移动端没 hover） */
+  .gpost-content img.zoom-img:hover {
+    transform: none;
+    animation: none;
+  }
+}
