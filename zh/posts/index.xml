@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>日志 on 霜落熊升树 林空鹿饮溪</title>
-    <link>http://localhost:1313/myblog/zh/posts/</link>
+    <link>https://yunpeng-wang.github.io/myblog/zh/posts/</link>
     <description>Recent content in 日志 on 霜落熊升树 林空鹿饮溪</description>
     <generator>Hugo -- 0.147.6</generator>
     <language>zh</language>
     <copyright>Wang Yunpeng. 本网站展示的所有文字、摄影作品及视觉内容，版权归作者所有。</copyright>
     <lastBuildDate>Sun, 27 Apr 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/myblog/zh/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://yunpeng-wang.github.io/myblog/zh/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>五一深圳观鸟·第二日</title>
-      <link>http://localhost:1313/myblog/zh/posts/2025-04-27/</link>
+      <link>https://yunpeng-wang.github.io/myblog/zh/posts/2025-04-27/</link>
       <pubDate>Sun, 27 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/zh/posts/2025-04-27/</guid>
+      <guid>https://yunpeng-wang.github.io/myblog/zh/posts/2025-04-27/</guid>
       <description>红树林海滨生态公园</description>
     </item>
     <item>
       <title>五一深圳观鸟·第一日</title>
-      <link>http://localhost:1313/myblog/zh/posts/2025-04-26/</link>
+      <link>https://yunpeng-wang.github.io/myblog/zh/posts/2025-04-26/</link>
       <pubDate>Sat, 26 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/zh/posts/2025-04-26/</guid>
+      <guid>https://yunpeng-wang.github.io/myblog/zh/posts/2025-04-26/</guid>
       <description>深圳人才公园观鸟</description>
     </item>
   </channel>
