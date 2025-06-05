@@ -1,0 +1,160 @@
+/* 分页容器 */
+.c-pagination {
+  margin: 2rem auto;
+  padding: 0 1rem;
+  max-width: 1200px;
+}
+
+.c-pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* 所有按钮统一为正方形 */
+.c-pagination-first, 
+.c-pagination-prev, 
+.c-pagination-next, 
+.c-pagination-last,
+.c-pagination-page,
+.c-pagination-ellipsis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;          /* 正方形尺寸 - 修改此值调整大小 */
+  height: 1.5rem;         /* 保持与width相同 */
+  min-width: auto;        /* 覆盖原有min-width */
+  padding: 0;             /* 移除内边距 */
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.c-pagination-pages {
+  display: flex; /* 确保使用flex布局 */
+  flex-direction: row; /* 强制水平排列 */
+  flex-wrap: nowrap; /* 禁止换行 */
+  gap: 0.25rem;
+  margin: 0 0.5rem;
+  align-items: center; /* 垂直居中 */
+}
+
+/* 禁用状态同样保持正方形 */
+.c-pagination-first.disabled, 
+.c-pagination-prev.disabled, 
+.c-pagination-next.disabled, 
+.c-pagination-last.disabled {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* 图标样式 - 修改此值调整图标大小 */
+.c-pagination-icon {
+  width: 1rem;   /* 图标宽度 */
+  height: 1rem;  /* 图标高度 */
+  flex-shrink: 0;   /* 防止图标被压缩 */
+}
+
+/* 文字与图标间距 - 修改此值调整间距 */
+.c-pagination-prev .c-pagination-icon {
+  margin-right: 0.25rem;
+}
+
+.c-pagination-next .c-pagination-icon {
+  margin-left: 0.25rem;
+}
+
+/* 文字按钮内部布局 */
+.c-pagination-prev, .c-pagination-next {
+  flex-direction: row;
+}
+
+.c-pagination-text {
+  display: block;
+  font-size: 0.875rem; /* 文字大小 */
+}
+
+/* 未被选中的按钮 - 普通状态 */
+.c-pagination a.c-pagination-page,
+.c-pagination a.c-pagination-first,
+.c-pagination a.c-pagination-prev,
+.c-pagination a.c-pagination-next,
+.c-pagination a.c-pagination-last {
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+/* 未被选中的按钮 - 悬停状态 */
+.c-pagination a.c-pagination-page:hover,
+.c-pagination a.c-pagination-first:hover,
+.c-pagination a.c-pagination-prev:hover,
+.c-pagination a.c-pagination-next:hover,
+.c-pagination a.c-pagination-last:hover {
+  background-color: transparent;
+  border: 0.1rem solid var(--primary);
+  color: var(--text-muted);
+}
+
+/* 当前页样式 */
+.c-pagination-page.current {
+  color: var(--primary);
+  background-color: rgba(4,136,224,0.65);
+  border-color: rgba(4,136,224,0.65);
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 8px;
+  padding: 0; 
+}
+
+/* 禁用状态 */
+.c-pagination-first.disabled, 
+.c-pagination-prev.disabled, 
+.c-pagination-next.disabled, 
+.c-pagination-last.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--text-muted);
+}
+
+.c-pagination-ellipsis {
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+  .c-pagination-pages {
+    display: none;
+  }
+  
+  /* 移动端按钮尺寸 */
+  .c-pagination-first, 
+  .c-pagination-prev, 
+  .c-pagination-next, 
+  .c-pagination-last {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  .c-pagination-text {
+    display: none; /* 移动端隐藏文字 */
+  }
+  
+  .c-pagination-prev .c-pagination-icon,
+  .c-pagination-next .c-pagination-icon {
+    margin: 0; /* 移动端移除图标间距 */
+  }
+}
+
+@media (min-width: 769px) {
+  .c-pagination-text {
+    display: block;
+  }
+}
