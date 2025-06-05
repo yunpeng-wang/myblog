@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Personal on My Wild Diary</title>
-    <link>https://yunpeng-wang.github.io/myblog/en/tags/personal/</link>
-    <description>Recent content in Personal on My Wild Diary</description>
+    <title>Personal on The Call of the Wild</title>
+    <link>http://localhost:1313/myblog/en/tags/personal/</link>
+    <description>Recent content in Personal on The Call of the Wild</description>
     <generator>Hugo -- 0.147.6</generator>
     <language>en</language>
     <copyright>Yunpeng Wang. All content on this site is © the author unless otherwise stated.</copyright>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://yunpeng-wang.github.io/myblog/en/tags/personal/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/myblog/en/tags/personal/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

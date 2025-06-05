@@ -252,7 +252,7 @@ figcaption {
   }
 
   img.img-quater {
-    width: calc(50% - 1rem); /* 增加间隙补偿 */
+    width: calc(25% - 1.5rem); /* 增加间隙补偿 */
   }
 }
 
@@ -263,6 +263,6 @@ figcaption {
   }
 
   img.img-quater {
-    width: calc(50% - 0.5rem); /* 增加间隙补偿 */
+    width: calc(25% - 0.75rem); /* 增加间隙补偿 */
   }
 }
