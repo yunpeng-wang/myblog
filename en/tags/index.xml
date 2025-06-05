@@ -2,67 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on My Wild Diary</title>
-    <link>http://localhost:1313/myblog/en/tags/</link>
+    <link>https://yunpeng-wang.github.io/myblog/en/tags/</link>
     <description>Recent content in Tags on My Wild Diary</description>
     <generator>Hugo -- 0.147.6</generator>
     <language>en</language>
     <copyright>Yunpeng Wang. All content on this site is © the author unless otherwise stated.</copyright>
     <lastBuildDate>Fri, 30 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/myblog/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://yunpeng-wang.github.io/myblog/en/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Birding</title>
-      <link>http://localhost:1313/myblog/en/tags/birding/</link>
+      <link>https://yunpeng-wang.github.io/myblog/en/tags/birding/</link>
       <pubDate>Fri, 30 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/en/tags/birding/</guid>
+      <guid>https://yunpeng-wang.github.io/myblog/en/tags/birding/</guid>
       <description></description>
     </item>
     <item>
       <title>Personal</title>
-      <link>http://localhost:1313/myblog/en/tags/personal/</link>
+      <link>https://yunpeng-wang.github.io/myblog/en/tags/personal/</link>
       <pubDate>Fri, 30 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/en/tags/personal/</guid>
+      <guid>https://yunpeng-wang.github.io/myblog/en/tags/personal/</guid>
       <description></description>
     </item>
     <item>
       <title>Photography</title>
-      <link>http://localhost:1313/myblog/en/tags/photography/</link>
+      <link>https://yunpeng-wang.github.io/myblog/en/tags/photography/</link>
       <pubDate>Fri, 30 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/en/tags/photography/</guid>
+      <guid>https://yunpeng-wang.github.io/myblog/en/tags/photography/</guid>
       <description></description>
     </item>
     <item>
       <title>Wildlife</title>
-      <link>http://localhost:1313/myblog/en/tags/wildlife/</link>
+      <link>https://yunpeng-wang.github.io/myblog/en/tags/wildlife/</link>
       <pubDate>Fri, 30 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/en/tags/wildlife/</guid>
+      <guid>https://yunpeng-wang.github.io/myblog/en/tags/wildlife/</guid>
       <description></description>
     </item>
     <item>
       <title>2025</title>
-      <link>http://localhost:1313/myblog/en/tags/2025/</link>
+      <link>https://yunpeng-wang.github.io/myblog/en/tags/2025/</link>
       <pubDate>Sun, 27 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/en/tags/2025/</guid>
+      <guid>https://yunpeng-wang.github.io/myblog/en/tags/2025/</guid>
       <description></description>
     </item>
     <item>
       <title>April</title>
-      <link>http://localhost:1313/myblog/en/tags/april/</link>
+      <link>https://yunpeng-wang.github.io/myblog/en/tags/april/</link>
       <pubDate>Sun, 27 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/en/tags/april/</guid>
+      <guid>https://yunpeng-wang.github.io/myblog/en/tags/april/</guid>
       <description></description>
     </item>
     <item>
       <title>Bird</title>
-      <link>http://localhost:1313/myblog/en/tags/bird/</link>
+      <link>https://yunpeng-wang.github.io/myblog/en/tags/bird/</link>
       <pubDate>Sun, 27 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/en/tags/bird/</guid>
+      <guid>https://yunpeng-wang.github.io/myblog/en/tags/bird/</guid>
       <description></description>
     </item>
     <item>
       <title>China</title>
-      <link>http://localhost:1313/myblog/en/tags/china/</link>
+      <link>https://yunpeng-wang.github.io/myblog/en/tags/china/</link>
       <pubDate>Sun, 27 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/en/tags/china/</guid>
+      <guid>https://yunpeng-wang.github.io/myblog/en/tags/china/</guid>
       <description></description>
     </item>
   </channel>

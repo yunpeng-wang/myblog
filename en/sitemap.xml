@@ -2,165 +2,165 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/myblog/en/about/</loc>
+    <loc>https://yunpeng-wang.github.io/myblog/en/about/</loc>
     <lastmod>2025-05-30T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/myblog/zh/about/"
+                href="https://yunpeng-wang.github.io/myblog/zh/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/myblog/en/about/"
+                href="https://yunpeng-wang.github.io/myblog/en/about/"
                 />
   </url><url>
-    <loc>http://localhost:1313/myblog/en/tags/birding/</loc>
+    <loc>https://yunpeng-wang.github.io/myblog/en/tags/birding/</loc>
     <lastmod>2025-05-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/en/</loc>
-    <lastmod>2025-05-30T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/myblog/zh/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/myblog/en/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/myblog/en/tags/personal/</loc>
-    <lastmod>2025-05-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/myblog/en/tags/photography/</loc>
-    <lastmod>2025-05-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/myblog/en/tags/</loc>
+    <loc>https://yunpeng-wang.github.io/myblog/en/</loc>
     <lastmod>2025-05-30T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/myblog/zh/tags/"
+                href="https://yunpeng-wang.github.io/myblog/zh/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/myblog/en/tags/"
+                href="https://yunpeng-wang.github.io/myblog/en/"
                 />
   </url><url>
-    <loc>http://localhost:1313/myblog/en/tags/wildlife/</loc>
+    <loc>https://yunpeng-wang.github.io/myblog/en/tags/personal/</loc>
     <lastmod>2025-05-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/en/tags/2025/</loc>
-    <lastmod>2025-04-27T00:00:00+00:00</lastmod>
+    <loc>https://yunpeng-wang.github.io/myblog/en/tags/photography/</loc>
+    <lastmod>2025-05-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://yunpeng-wang.github.io/myblog/en/tags/</loc>
+    <lastmod>2025-05-30T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/myblog/zh/tags/2025/"
+                href="https://yunpeng-wang.github.io/myblog/zh/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/myblog/en/tags/2025/"
+                href="https://yunpeng-wang.github.io/myblog/en/tags/"
                 />
   </url><url>
-    <loc>http://localhost:1313/myblog/en/tags/april/</loc>
-    <lastmod>2025-04-27T00:00:00+00:00</lastmod>
+    <loc>https://yunpeng-wang.github.io/myblog/en/tags/wildlife/</loc>
+    <lastmod>2025-05-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/myblog/en/tags/bird/</loc>
-    <lastmod>2025-04-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/myblog/en/posts/2025-04-27/</loc>
+    <loc>https://yunpeng-wang.github.io/myblog/en/tags/2025/</loc>
     <lastmod>2025-04-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/myblog/zh/posts/2025-04-27/"
+                href="https://yunpeng-wang.github.io/myblog/zh/tags/2025/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/myblog/en/posts/2025-04-27/"
+                href="https://yunpeng-wang.github.io/myblog/en/tags/2025/"
                 />
   </url><url>
-    <loc>http://localhost:1313/myblog/en/posts/</loc>
+    <loc>https://yunpeng-wang.github.io/myblog/en/tags/april/</loc>
+    <lastmod>2025-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://yunpeng-wang.github.io/myblog/en/tags/bird/</loc>
+    <lastmod>2025-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://yunpeng-wang.github.io/myblog/en/posts/2025-04-27/</loc>
     <lastmod>2025-04-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/myblog/zh/posts/"
+                href="https://yunpeng-wang.github.io/myblog/zh/posts/2025-04-27/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/myblog/en/posts/"
+                href="https://yunpeng-wang.github.io/myblog/en/posts/2025-04-27/"
                 />
   </url><url>
-    <loc>http://localhost:1313/myblog/en/tags/china/</loc>
-    <lastmod>2025-04-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/myblog/en/gallery/</loc>
+    <loc>https://yunpeng-wang.github.io/myblog/en/posts/</loc>
     <lastmod>2025-04-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/myblog/zh/gallery/"
+                href="https://yunpeng-wang.github.io/myblog/zh/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/myblog/en/gallery/"
+                href="https://yunpeng-wang.github.io/myblog/en/posts/"
                 />
   </url><url>
-    <loc>http://localhost:1313/myblog/en/posts/2025-04-26/</loc>
+    <loc>https://yunpeng-wang.github.io/myblog/en/tags/china/</loc>
+    <lastmod>2025-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://yunpeng-wang.github.io/myblog/en/gallery/</loc>
+    <lastmod>2025-04-27T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://yunpeng-wang.github.io/myblog/zh/gallery/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yunpeng-wang.github.io/myblog/en/gallery/"
+                />
+  </url><url>
+    <loc>https://yunpeng-wang.github.io/myblog/en/posts/2025-04-26/</loc>
     <lastmod>2025-04-26T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/myblog/zh/posts/2025-04-26/"
+                href="https://yunpeng-wang.github.io/myblog/zh/posts/2025-04-26/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/myblog/en/posts/2025-04-26/"
+                href="https://yunpeng-wang.github.io/myblog/en/posts/2025-04-26/"
                 />
   </url><url>
-    <loc>http://localhost:1313/myblog/en/archives/</loc>
+    <loc>https://yunpeng-wang.github.io/myblog/en/archives/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/myblog/zh/archives/"
+                href="https://yunpeng-wang.github.io/myblog/zh/archives/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/myblog/en/archives/"
+                href="https://yunpeng-wang.github.io/myblog/en/archives/"
                 />
   </url><url>
-    <loc>http://localhost:1313/myblog/en/categories/</loc>
+    <loc>https://yunpeng-wang.github.io/myblog/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/myblog/zh/categories/"
+                href="https://yunpeng-wang.github.io/myblog/zh/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/myblog/en/categories/"
+                href="https://yunpeng-wang.github.io/myblog/en/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/myblog/en/search/</loc>
+    <loc>https://yunpeng-wang.github.io/myblog/en/search/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://localhost:1313/myblog/zh/search/"
+                href="https://yunpeng-wang.github.io/myblog/zh/search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/myblog/en/search/"
+                href="https://yunpeng-wang.github.io/myblog/en/search/"
                 />
   </url>
 </urlset>
