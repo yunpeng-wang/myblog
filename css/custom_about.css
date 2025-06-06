@@ -47,7 +47,7 @@
 .about-content {
     font-size: 1.1rem;
     line-height: 1.85;
-    letter-spacing: 0.02em;
+    letter-spacing: normal;
     color: var(--content);
 
     p {
