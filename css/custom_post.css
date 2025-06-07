@@ -16,6 +16,7 @@ g:root {
   margin-bottom: 1.5rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  --pcard-title-color: #267C74;
 }
 
 body.dark .post-card {
@@ -25,6 +26,7 @@ body.dark .post-card {
     --plink-hover: #90cdf4;
     --pmuted: #aaa;
     --pdescription-color: #ccc;
+    --pcard-title-color: #AEE1E0;
 }
 
 .post-card:hover {
@@ -70,7 +72,7 @@ body.dark .post-card {
 
 .post-card-title a {
   text-decoration: none;
-  color: inherit;
+  color: var(--pcard-title-color)
 }
 
 .post-card-title a:hover {
