@@ -60,33 +60,41 @@
   }
 }
 
-.glightbox-container {
-  max-height: 100vh !important;
-  max-width: 100vw !important;
+:root {
+  --scroll-offset: 0px;
+  --viewport-top: 0px;
 }
 
-.glightbox-container .gslider {
-  max-height: 100vh !important;
-  max-width: 100vw !important;
+/* Glightbox 视口锁定 */
+#glightbox-body {
+  position: fixed !important;
+  top: var(--viewport-top) !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  z-index: 999999 !important;
+  background: rgba(0,0,0,0.95) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
-.gslide-image img {
-  object-fit: contain;
-  height: auto;
-  width: auto;
-  max-height: 100%;
-  max-width: 100%;
-  margin: auto;
+/* 让每个 slide 在视口内水平+垂直居中 */
+#glightbox-body .gslide {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 100vh !important;
+  width: 100vw !important;
 }
 
-.glightbox-clean .gprev,
-.glightbox-clean .gnext {
-  position: absolute !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  width: 40px;
-  height: 50px;
-}
+  .glightbox-clean .gclose {
+     background-color: rgba(0, 0, 0, .32) !important;
+     right:3% !important;
+  }
 
 @media (max-width: 769px) {
   .glightbox-clean .gprev,
@@ -98,7 +106,8 @@
     width: 40px;
     height: 50px;
   }
+
   .glightbox-clean .gclose {
-     background-color: rgba(0, 0, 0, .32) !important;
+     right:4% !important;
   }
 }
