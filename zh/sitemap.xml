@@ -28,6 +28,19 @@
                 href="https://beholdwild.org/zh/about/"
                 />
   </url><url>
+    <loc>https://beholdwild.org/zh/gallery/</loc>
+    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://beholdwild.org/en/gallery/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://beholdwild.org/zh/gallery/"
+                />
+  </url><url>
     <loc>https://beholdwild.org/zh/posts/2025-04-28/</loc>
     <lastmod>2025-04-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -52,19 +65,6 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://beholdwild.org/zh/posts/"
-                />
-  </url><url>
-    <loc>https://beholdwild.org/zh/gallery/</loc>
-    <lastmod>2025-04-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://beholdwild.org/en/gallery/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://beholdwild.org/zh/gallery/"
                 />
   </url><url>
     <loc>https://beholdwild.org/zh/posts/2025-04-27/</loc>
