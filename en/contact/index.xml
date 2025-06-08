@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Get in Touch on Wang&#39;s Field Notes</title>
-    <link>https://yunpeng-wang.github.io/myblog/en/contact/</link>
-    <description>Recent content in Get in Touch on Wang&#39;s Field Notes</description>
+    <title>Get in Touch on Behold the Wild</title>
+    <link>https://beholdwild.org/en/contact/</link>
+    <description>Recent content in Get in Touch on Behold the Wild</description>
     <generator>Hugo -- 0.147.6</generator>
     <language>en</language>
     <copyright>Yunpeng Wang. All content on this site is © the author unless otherwise stated.</copyright>
-    <atom:link href="https://yunpeng-wang.github.io/myblog/en/contact/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://beholdwild.org/en/contact/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
