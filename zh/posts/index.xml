@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>日志 on Behold the Wild</title>
-    <link>https://beholdwild.org/zh/posts/</link>
+    <link>https://www.beholdwild.org/zh/posts/</link>
     <description>Recent content in 日志 on Behold the Wild</description>
     <generator>Hugo -- 0.147.6</generator>
     <language>zh</language>
     <copyright>Wang Yunpeng. 本网站展示的所有文字、摄影作品及视觉内容，版权归作者所有。</copyright>
     <lastBuildDate>Mon, 28 Apr 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://beholdwild.org/zh/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.beholdwild.org/zh/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>芦苇荡里的涟漪</title>
-      <link>https://beholdwild.org/zh/posts/2025-04-28/</link>
+      <link>https://www.beholdwild.org/zh/posts/2025-04-28/</link>
       <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://beholdwild.org/zh/posts/2025-04-28/</guid>
+      <guid>https://www.beholdwild.org/zh/posts/2025-04-28/</guid>
       <description>五一深圳观鸟·第三日</description>
     </item>
     <item>
       <title>红树林公园的Livehouse</title>
-      <link>https://beholdwild.org/zh/posts/2025-04-27/</link>
+      <link>https://www.beholdwild.org/zh/posts/2025-04-27/</link>
       <pubDate>Sun, 27 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://beholdwild.org/zh/posts/2025-04-27/</guid>
+      <guid>https://www.beholdwild.org/zh/posts/2025-04-27/</guid>
       <description>五一深圳观鸟·第二日</description>
     </item>
     <item>
       <title>人才公园的红耳鹎</title>
-      <link>https://beholdwild.org/zh/posts/2025-04-26/</link>
+      <link>https://www.beholdwild.org/zh/posts/2025-04-26/</link>
       <pubDate>Sat, 26 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://beholdwild.org/zh/posts/2025-04-26/</guid>
+      <guid>https://www.beholdwild.org/zh/posts/2025-04-26/</guid>
       <description>五一深圳观鸟·第一日</description>
     </item>
   </channel>

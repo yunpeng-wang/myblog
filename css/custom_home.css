@@ -1,0 +1,65 @@
+/* 修改按钮基础样式 */
+body {
+    --cbutton-bg: rgba(0, 179, 214, 0.6);
+    --cbutton-hover-bg: rgb(0, 150, 200, 0.7);
+    --cbutton-shadow1: rgba(0, 0, 0, 0.1);
+    --cbutton-shadow2: rgba(0, 0, 0, 0.2);
+    --cbutton-shadow3: rgba(255, 255, 255, 0.2);
+}
+
+body.dark {
+    --cbutton-bg: rgba(0, 150, 200, 0.35);
+    --cbutton-hover-bg: rgba(0, 180, 230, 0.5);
+    --cbutton-shadow1: rgba(0, 0, 0, 0.6);
+    --cbutton-shadow2: rgba(255, 255, 255, 0.05);
+    --cbutton-shadow3: rgba(255, 255, 255, 0.15);
+}
+
+.profile_inner .buttons .button {
+  /* 修改按钮颜色 */
+  background-color: var(--cbutton-bg) !important; /* 主色 */
+  color: var(--button-text, #ffffff) !important; /* 文字色 */
+  
+  /* 添加阴影 - 创建立体感 */
+  box-shadow: 
+    0 2px 3px var(--cbutton-shadow1), /* 外部阴影 */
+    inset 0 -2.2px 0 var(--cbutton-shadow2), /* 底部内阴影 - 增加立体感 */
+    inset 0 2px 0 var(--cbutton-shadow3); /* 顶部内阴影 - 增加光泽 */
+  
+  /* 其他效果 */
+  border-radius: 8px !important; /* 圆角 */
+  border: none !important; /* 移除默认边框 */
+  transition: all 0.3s ease !important; /* 平滑过渡效果 */
+  transform: translateY(0); /* 初始位置 */
+}
+
+/* 鼠标悬停效果 */
+.profile_inner .buttons .button:hover {
+  background-color: var(--cbutton-hover-bg) !important; /* 悬停颜色 */
+  transform: translateY(-2px); /* 轻微上浮效果 */
+  box-shadow: 
+    0 6px 12px rgba(0, 0, 0, 0.15),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.25),
+    inset 0 3px 0 rgba(255, 255, 255, 0.15);
+}
+
+/* 点击效果 */
+.profile_inner .buttons .button:active {
+  transform: translateY(1px); /* 按下效果 */
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.profile_inner > span {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+/* 可选：不同按钮不同颜色 */
+/*.profile_inner .buttons .button:nth-child(1) { --button-bg: #3a86ff; } /* 蓝色 */
+/*.profile_inner .buttons .button:nth-child(2) { --button-bg: #ff006e; } /* 粉色 */
+/*.profile_inner .buttons .button:nth-child(3) { --button-bg: #8338ec; } /* 紫色 */
