@@ -304,8 +304,9 @@ const themeTransitionEvents = {
 </header>
 <main class="main"><div class="profile">
     <div class="profile_inner">
-        <img draggable="false" src="https://www.beholdwild.org/images/avatar.png" alt="profile image" title=""
-            height="250" width="250" />
+        <img draggable="false" src="https://www.beholdwild.org/images/avatar.png" alt=" profile image"
+            title="" height="250"
+            width="250" />
         <h1>汪某人的摄影日志</h1>
         <span>“To behold the wild, and be beheld in return.”</span><div class="social-icons" >
     <a href="https://ebird.org/profile/MzU1ODI4Mg/world" target="_blank" rel="noopener noreferrer me"
@@ -361,9 +362,25 @@ const themeTransitionEvents = {
                 </span>
             </a>
         </div>
+        <div id="clock"></div>
+
+        <script>
+            function updateClock() {
+                const now = new Date();
+                const options = {
+                    weekday: 'short', year: 'numeric', month: 'short',
+                    day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit'
+                };
+                const lang = document.documentElement.lang || 'en'; 
+                document.getElementById('clock').textContent =
+                    now.toLocaleString(lang, options);
+            }
+
+            setInterval(updateClock, 1000);
+            updateClock();
+        </script>
     </div>
 </div>
-
     </main>
     
 <footer class="footer">

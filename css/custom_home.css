@@ -63,3 +63,19 @@ body.dark {
 /*.profile_inner .buttons .button:nth-child(1) { --button-bg: #3a86ff; } /* 蓝色 */
 /*.profile_inner .buttons .button:nth-child(2) { --button-bg: #ff006e; } /* 粉色 */
 /*.profile_inner .buttons .button:nth-child(3) { --button-bg: #8338ec; } /* 紫色 */
+
+#clock {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  opacity: 0.6;
+}
+
+/* 针对语言样式定制 */
+html[lang="zh"] #clock {
+  font-family: "Noto Sans SC", "PingFang SC", sans-serif;
+  letter-spacing: 0.1em
+}
+
+html[lang="en"] #clock {
+  font-family: monospace,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
