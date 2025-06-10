@@ -1,9 +1,9 @@
 /* 修改按钮基础样式 */
 body {
-    --cbutton-bg: rgba(220, 220, 220, 0.6);;
-    --cbutton-hover-bg: rgba(200, 200, 200, 0.8);
+    --cbutton-bg: rgba(220, 220, 220, 0.3);;
+    --cbutton-hover-bg: rgba(200, 200, 200, 0.5);
     --cbutton-shadow1: rgba(0, 0, 0, 0.08);
-    --cbutton-shadow2: rgba(255, 255, 255, 0.8);
+    --cbutton-shadow2: rgba(255, 255, 255, 0.7);
     --cbutton-shadow3: rgba(0, 0, 0, 0.05);
 }
 
