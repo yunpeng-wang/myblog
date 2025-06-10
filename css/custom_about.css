@@ -146,12 +146,24 @@ body {
     --acard-bg: #f0ebe4;
     --acard-border: #ecdfcd;
     --acard-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+    --about-photo-bg-gradient-start: #f0ebe4;
+    --about-photo-bg-gradient-end: #f8f8f8;
+    --about-photo-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    --about-photo-border-radius: 12px;
+    --about-photo-caption-color: #666;
 }
 
 body.dark {
     --acard-bg: #4f4f4f;
     --acard-border: #5a5a5a;
     --acard-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    --about-photo-bg-gradient-start: #3b3b3b;
+    --about-photo-bg-gradient-end: #5a5a5a;
+    --about-photo-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    --about-photo-border-radius: 12px;
+    --about-photo-caption-color: #cccccc;
 }
 
 .about-wrapper {
@@ -192,10 +204,10 @@ body.dark {
 }
 
 .about-photo-bg {
-  background: linear-gradient(90deg, #f0ebe4 0%, #f8f8f8 100%);
+  background: linear-gradient(90deg, var(--about-photo-bg-gradient-start) 0%, var(--about-photo-bg-gradient-end) 100%);
   padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border-radius: var(--about-photo-border-radius);
+  box-shadow: var(--about-photo-shadow);
   max-width: 500px;
   align-items: center;
   justify-content: center;
@@ -213,7 +225,7 @@ body.dark {
 .about-photo-bg p {
   margin-top: 0.5rem;
   font-style: italic;
-  color: #666;
+  color: var(--about-photo-caption-color);
   font-size: 0.9rem;
 }
 
