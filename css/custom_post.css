@@ -1,10 +1,25 @@
-g:root {
+:root {
   --pcard-bg: #f0ebe4;
   --pcard-text: #111;
   --pborder: #ecdfcd;
+  --pcard-hover: #eae3d9;
   --plink-hover: #007acc;
   --pmuted: #888;
-  --pdescription-color: #444;
+  --pdescription-color: #403b36;
+  --pcard-title-color: #267C74;
+
+  --tags-filter-border: #e3ded7cc;
+
+  --tag-link-bg:         #f0ebe4cc;
+  --tag-link-text:       #4a4a4a;
+  --tag-link-border:     #e1d9cfcc;
+
+  --tag-link-hover-bg:   #e9e3dacc;
+  --tag-link-hover-text: #2f2f2f;
+
+  --tag-link-active-bg:     #ded6c7cc;
+  --tag-link-active-text:   #1f1f1f;
+  --tag-link-active-border: #cfc5b3cc;
 }
 
 .post-card {
@@ -16,22 +31,22 @@ g:root {
   margin-bottom: 1.5rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   transition: box-shadow 0.3s ease, background-color 0.3s ease;
-  --pcard-title-color: #267C74;
 }
 
 body.dark .post-card {
-    --pcard-bg: #4f4f4f;
+    --pcard-bg: #2e2f33;
     --pcard-text: #eee;
-    --pborder: #5a5a5a;
+    --pborder: #3c3d41;
+    --pcard-hover: #393a3f;
     --plink-hover: #90cdf4;
     --pmuted: #aaa;
-    --pdescription-color: #ccc;
+    --pdescription-color: #e5e1dc;
     --pcard-title-color: #AEE1E0;
 }
 
 .post-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 16px var(--pcard-hover);
   transition: all 0.2s ease-in-out;
 }
 
@@ -267,4 +282,62 @@ figcaption {
   img.img-quater {
     width: calc(25% - 0.75rem); /* 增加间隙补偿 */
   }
+}
+
+body.dark .tags-filter {
+  --tags-filter-border: #3a3b3d;
+
+  --tag-link-bg:         #2a2b2d;
+  --tag-link-text:       #c2c2c2;
+  --tag-link-border:     #3f4043;
+
+  --tag-link-hover-bg:   #343638;
+  --tag-link-hover-text: #e6e6e6;
+
+  --tag-link-active-bg:     #404245;
+  --tag-link-active-text:   #ffffff;
+  --tag-link-active-border: #5a5d60;
+}
+
+/* 标签筛选容器 */
+.tags-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  padding-top: 0.3rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--tags-filter-border); /* 淡灰分隔线 */
+}
+
+/* 单个 tag 按钮 */
+.tag-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--tag-link-text);           /* 深蓝灰文字 */
+  background-color: var(--tag-link-bg); /* 极浅灰背景 */
+  border: 1px solid var(--tag-link-border); /* 浅灰边框 */
+  border-radius: 0.375rem;   /* 6px 圆角 */
+  text-decoration: none;
+  transition: 
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.1s ease;
+}
+
+/* Hover 效果 */
+.tag-link:hover {
+  background-color: var(--tag-link-hover-bg); /* 略深背景 */
+  color: var(--tag-link-hover-text);            /* 更深文字 */
+  transform: translateY(-1px);
+}
+
+/* Active / 点击效果 */
+.tag-link.active {
+  background-color: var(--tag-link-active-bg);
+  color: var(--tag-link-active-text);
+  border-color: var(--tag-link-active-border);
 }
