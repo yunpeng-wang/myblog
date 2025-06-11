@@ -29,7 +29,7 @@
                 />
   </url><url>
     <loc>https://www.beholdwild.org/zh/tags/</loc>
-    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
+    <lastmod>2025-04-30T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -40,6 +40,48 @@
                 hreflang="zh"
                 href="https://www.beholdwild.org/zh/tags/"
                 />
+  </url><url>
+    <loc>https://www.beholdwild.org/zh/posts/2025-04-30/</loc>
+    <lastmod>2025-04-30T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.beholdwild.org/en/posts/2025-04-30/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://www.beholdwild.org/zh/posts/2025-04-30/"
+                />
+  </url><url>
+    <loc>https://www.beholdwild.org/zh/posts/</loc>
+    <lastmod>2025-04-30T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.beholdwild.org/en/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://www.beholdwild.org/zh/posts/"
+                />
+  </url><url>
+    <loc>https://www.beholdwild.org/zh/gallery/</loc>
+    <lastmod>2025-04-30T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.beholdwild.org/en/gallery/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://www.beholdwild.org/zh/gallery/"
+                />
+  </url><url>
+    <loc>https://www.beholdwild.org/zh/tags/%E9%87%8E%E7%94%9F%E5%8A%A8%E7%89%A9/</loc>
+    <lastmod>2025-04-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.beholdwild.org/zh/posts/2025-04-29/</loc>
     <lastmod>2025-04-29T00:00:00+00:00</lastmod>
@@ -53,35 +95,6 @@
                 hreflang="zh"
                 href="https://www.beholdwild.org/zh/posts/2025-04-29/"
                 />
-  </url><url>
-    <loc>https://www.beholdwild.org/zh/posts/</loc>
-    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.beholdwild.org/en/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://www.beholdwild.org/zh/posts/"
-                />
-  </url><url>
-    <loc>https://www.beholdwild.org/zh/gallery/</loc>
-    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.beholdwild.org/en/gallery/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://www.beholdwild.org/zh/gallery/"
-                />
-  </url><url>
-    <loc>https://www.beholdwild.org/zh/tags/%E9%87%8E%E7%94%9F%E5%8A%A8%E7%89%A9/</loc>
-    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.beholdwild.org/zh/posts/2025-04-28/</loc>
     <lastmod>2025-04-28T00:00:00+00:00</lastmod>

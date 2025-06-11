@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="zh" dir="auto">
+<html lang="en" dir="auto">
 
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Tags | Behold the Wild</title>
+<title>Gallery | Behold the Wild</title>
 <meta name="keywords" content="">
-<meta name="description" content="To behold the wild, and be beheld in return.">
-<meta name="author" content="Wang Yunpeng">
-<link rel="canonical" href="https://www.beholdwild.org/zh/tags/">
+<meta name="description" content="Gallery - Behold the Wild">
+<meta name="author" content="Yunpeng Wang">
+<link rel="canonical" href="https://www.beholdwild.org/en/gallery/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.b12eb82b69c781152f76faa37150e5b5ec52de101978c233d16f93f92a695138.css" integrity="sha256-sS64K2nHgRUvdvqjcVDltexS3hAZeMIz0W&#43;T&#43;SppUTg=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://www.beholdwild.org/favicon.png">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.beholdwild.org/favicon-16x16.png">
@@ -18,9 +18,9 @@
 <link rel="mask-icon" href="https://www.beholdwild.org/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://www.beholdwild.org/zh/tags/index.xml">
-<link rel="alternate" hreflang="zh" href="https://www.beholdwild.org/zh/tags/">
-<link rel="alternate" hreflang="en" href="https://www.beholdwild.org/en/tags/">
+<link rel="alternate" type="application/rss+xml" href="https://www.beholdwild.org/en/gallery/index.xml">
+<link rel="alternate" hreflang="zh" href="https://www.beholdwild.org/zh/gallery/">
+<link rel="alternate" hreflang="en" href="https://www.beholdwild.org/en/gallery/">
 <noscript>
     <style>
         #theme-toggle,
@@ -184,23 +184,41 @@ const themeTransitionEvents = {
 </style>
 
 
-<link rel="stylesheet" href="/css/custom_post.css">
+
+
+<link rel="stylesheet" href="/css/custom_gallery.css">
+<link rel="stylesheet" href="/vendor/glightbox/glightbox.min.css">
+<script src="/js/glightbox-fix.js"></script>
+<link rel="stylesheet" href="/css/custom_pagination.css">
 
 
 
 
-
-
-<meta property="og:url" content="https://www.beholdwild.org/zh/tags/">
+<meta property="og:url" content="https://www.beholdwild.org/en/gallery/">
   <meta property="og:site_name" content="Behold the Wild">
-  <meta property="og:title" content="Tags">
+  <meta property="og:title" content="Gallery">
   <meta property="og:description" content="To behold the wild, and be beheld in return.">
-  <meta property="og:locale" content="zh">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tags">
+<meta name="twitter:title" content="Gallery">
 <meta name="twitter:description" content="To behold the wild, and be beheld in return.">
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Gallery",
+      "item": "https://www.beholdwild.org/en/gallery/"
+    }
+  ]
+}
+</script>
 </head>
 
 <body class="list" id="top">
@@ -218,7 +236,7 @@ const themeTransitionEvents = {
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.beholdwild.org/zh/" accesskey="h" title="Behold the Wild (Alt + H)">Behold the Wild</a>
+            <a href="https://www.beholdwild.org/en/" accesskey="h" title="Behold the Wild (Alt + H)">Behold the Wild</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -242,60 +260,172 @@ const themeTransitionEvents = {
                 </button>
                 <ul class="lang-switch"><li>|</li>
                     <li>
-                        <a href="https://www.beholdwild.org/en/" title="🇺🇸 English"
-                            aria-label="🇺🇸 English">🇺🇸 English</a>
+                        <a href="https://www.beholdwild.org/zh/" title="🇨🇳 中文"
+                            aria-label="🇨🇳 中文">🇨🇳 中文</a>
                     </li>
                 </ul>
             </div>
         </div>
         <ul id="menu">
             <li>
-                <a href="https://www.beholdwild.org/zh/" title="主页">
-                    <span>主页</span>
+                <a href="https://www.beholdwild.org/en/" title="Home">
+                    <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.beholdwild.org/zh/posts/" title="日志">
-                    <span>日志</span>
+                <a href="https://www.beholdwild.org/en/posts/" title="Blog">
+                    <span>Blog</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.beholdwild.org/zh/gallery/" title="相册">
-                    <span>相册</span>
+                <a href="https://www.beholdwild.org/en/gallery/" title="Gallery">
+                    <span class="active">Gallery</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.beholdwild.org/zh/about/" title="关于">
-                    <span>关于</span>
+                <a href="https://www.beholdwild.org/en/about/" title="About">
+                    <span>About</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.beholdwild.org/zh/archives/" title="归档">
-                    <span>归档</span>
+                <a href="https://www.beholdwild.org/en/archives/" title="Archive">
+                    <span>Archive</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.beholdwild.org/zh/contact/" title="联系我">
-                    <span>联系我</span>
+                <a href="https://www.beholdwild.org/en/contact/" title="Get in Touch">
+                    <span>Get in Touch</span>
                 </a>
             </li>
         </ul>
     </nav>
 </header>
 <main class="main">
-<header class="page-header">
-    <h1>Tags</h1>
-</header>
+<div class="gpost-content">
 
-<ul class="terms-tags">
-    <li>
-        <a href="https://www.beholdwild.org/zh/tags/%E9%87%8E%E7%94%9F%E5%8A%A8%E7%89%A9/">野生动物 <sup><strong><sup>5</sup></strong></sup> </a>
-    </li>
-</ul>
+
+  
+    <a href="/images/1993-07-15/gallery_PC261873.jpg" class="glightbox" data-gallery="gallery">
+  <img src="/images/1993-07-15/gallery_PC261873.jpg" alt="gallery_PC261873" loading="lazy" class="zoom-img" />
+</a>
+  
+    <a href="/images/1993-07-15/gallery_PC270776.jpg" class="glightbox" data-gallery="gallery">
+  <img src="/images/1993-07-15/gallery_PC270776.jpg" alt="gallery_PC270776" loading="lazy" class="zoom-img" />
+</a>
+  
+    <a href="/images/1993-07-15/gallery_PC295910.jpg" class="glightbox" data-gallery="gallery">
+  <img src="/images/1993-07-15/gallery_PC295910.jpg" alt="gallery_PC295910" loading="lazy" class="zoom-img" />
+</a>
+  
+    <a href="/images/1993-07-15/gallery_PC301531.jpg" class="glightbox" data-gallery="gallery">
+  <img src="/images/1993-07-15/gallery_PC301531.jpg" alt="gallery_PC301531" loading="lazy" class="zoom-img" />
+</a>
+  
+    <a href="/images/1993-07-15/gallery_PC307712.jpg" class="glightbox" data-gallery="gallery">
+  <img src="/images/1993-07-15/gallery_PC307712.jpg" alt="gallery_PC307712" loading="lazy" class="zoom-img" />
+</a>
+  
+    <a href="/images/1993-07-15/gallery_PC313100.jpg" class="glightbox" data-gallery="gallery">
+  <img src="/images/1993-07-15/gallery_PC313100.jpg" alt="gallery_PC313100" loading="lazy" class="zoom-img" />
+</a>
+  
+</div>
+
+
+
+<nav class="c-pagination" aria-label="Pagination">
+  <div class="c-pagination-container">
+    
+    
+      <a href="/en/gallery/" class="c-pagination-first" aria-label="First Page">
+        <svg class="c-pagination-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+        </svg>
+      </a>
+    
+
+    
+      <a href="/en/gallery/page/6/" class="c-pagination-prev" aria-label="Previous">
+        <svg class="c-pagination-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+        <span class="c-pagination-text"></span>
+      </a>
+    
+    
+    <div class="c-pagination-pages">
+      
+      
+      
+      
+      
+        
+        
+          
+            <a href="/en/gallery/" class="c-pagination-page">1</a>
+          
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+          <span class="c-pagination-ellipsis">...</span>
+        
+      
+        
+        
+          
+            <a href="/en/gallery/page/5/" class="c-pagination-page">5</a>
+          
+        
+      
+        
+        
+          
+            <a href="/en/gallery/page/6/" class="c-pagination-page">6</a>
+          
+        
+      
+        
+        
+          
+            <span class="c-pagination-page current" aria-current="page">7</span>
+          
+        
+      
+    </div>
+    
+    
+      <span class="c-pagination-next disabled" aria-disabled="true">
+        <span class="c-pagination-text"></span>
+        <svg class="c-pagination-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </span>
+    
+
+    
+    
+      <span class="c-pagination-last disabled" aria-disabled="true">
+        <svg class="c-pagination-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+        </svg>
+      </span>
+    
+  </div>
+</nav>
+
+
+
     </main>
     
 <footer class="footer">
-        <span>© Wang Yunpeng. 本网站展示的所有文字、摄影作品及视觉内容，版权归作者所有。</span> · 
+        <span>© Yunpeng Wang. All content on this site is © the author unless otherwise stated.</span> · 
 
     <span>
         Powered by
