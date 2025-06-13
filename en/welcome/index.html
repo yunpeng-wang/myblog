@@ -56,19 +56,19 @@
             opacity: 1;
         }
 
-
         #mute-toggle {
             position: absolute;
             top: 20px;
             right: 20px;
             font-size: 1.5rem;
-            color: white;
+            color: rgb(255, 255, 255, 0.6);
             background: rgba(0, 0, 0, 0.3);
             border: none;
             padding: 5px;
             cursor: pointer;
             z-index: 100;
             border-radius: 6px;
+            transition: opacity 0.8s ease;
         }
     </style>
 </head>
@@ -125,6 +125,18 @@
             }, duration * step); 
         }
 
+        function fadeOutVolume(video, duration = 1000) {
+            let step = 0.05;
+            video.volume = 1.0;
+            const interval = setInterval(() => {
+                if (video.volume > 0) {
+                    video.volume = Math.max(0, video.volume - step);
+                } else {
+                    clearInterval(interval);
+                }
+            }, duration * step); 
+        }
+
         
 
 
@@ -134,6 +146,8 @@
             
             document.getElementById('introVideo').classList.add('fade-out');
             document.getElementById('enter-button').classList.add('fade-out');
+            document.getElementById('mute-toggle').classList.add('fade-out');
+            fadeOutVolume(document.getElementById('introVideo'));
 
             
             const overlay = document.getElementById('fade-overlay');
