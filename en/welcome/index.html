@@ -70,6 +70,20 @@
             border-radius: 6px;
             transition: opacity 0.8s ease;
         }
+
+        #domain-name {
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgb(255, 255, 255, 0.7);
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            font-family: sans-serif, monospace;
+            letter-spacing: 1px;
+            transition: opacity 0.8s ease;
+        }
     </style>
 </head>
 
@@ -82,6 +96,7 @@
     <button id="mute-toggle">🔇</button>
 
     <button id="enter-button" onclick="goHome()">⏭ 跳过 / Skip</button>
+    <div id="domain-name">beholdwild.org</div>
     <div id="fade-overlay"></div>
 
     <script>
@@ -147,6 +162,7 @@
             document.getElementById('introVideo').classList.add('fade-out');
             document.getElementById('enter-button').classList.add('fade-out');
             document.getElementById('mute-toggle').classList.add('fade-out');
+            document.getElementById('domain-name').classList.add('fade-out');
             fadeOutVolume(document.getElementById('introVideo'));
 
             
