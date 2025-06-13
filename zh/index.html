@@ -296,7 +296,24 @@ const themeTransitionEvents = {
         </ul>
     </nav>
 </header>
-<main class="main"><div class="profile">
+<main class="main"><script>
+    const seenIntro = sessionStorage.getItem('seenIntro');
+    const path = window.location.pathname;
+    const base = "\/".replace(/\/$/, '');
+
+    const shouldRedirect = (
+      (path.endsWith("/zh/") || path.endsWith("/zh")) &&
+      !seenIntro
+    );
+
+    if (shouldRedirect) {
+      sessionStorage.setItem('seenIntro', 'true');  
+      window.location.replace(`${base}/zh/welcome/`);
+    }
+  </script>
+
+  
+  <div class="profile">
     <div class="profile_inner">
         <img draggable="false" src="https://www.beholdwild.org/images/avatar.png" alt=" profile image"
             title="" height="250"
@@ -375,6 +392,7 @@ const themeTransitionEvents = {
         </script>
     </div>
 </div>
+
     </main>
     
 <footer class="footer">

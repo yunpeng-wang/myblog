@@ -170,5 +170,17 @@
                 hreflang="en"
                 href="https://www.beholdwild.org/en/contact/"
                 />
+  </url><url>
+    <loc>https://www.beholdwild.org/en/welcome/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://www.beholdwild.org/zh/welcome/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.beholdwild.org/en/welcome/"
+                />
   </url>
 </urlset>
