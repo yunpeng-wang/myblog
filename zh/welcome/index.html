@@ -127,17 +127,8 @@
         video.src = videoSrc;
         video.setAttribute('poster', posterSrc);
 
-        
-        while (video.firstChild) {
-        video.removeChild(video.firstChild);
-        }
-
-        
-        const source = document.createElement('source');
-        source.setAttribute('src', videoSrc);
-        source.setAttribute('type', 'video/mp4');
-        video.appendChild(source);
-        
+ 
+       
         muteToggle.addEventListener('click', () => {
             if (video.muted) {
                 
@@ -149,15 +140,6 @@
                 muteToggle.textContent = '🔇';
             }
         });
-
-        
-        try {
-            video.load();
-            video.play(); 
-        } 
-        catch (e) {
-            console.warn('Autoplay failed, maybe interaction needed:', e);
-        }
 
         function fadeInVolume(video, duration = 1000) {
             let step = 0.05;
