@@ -91,10 +91,10 @@
 <body>
 
     <video id="introVideo"
-            autoplay 
-            muted 
-            playsinline 
-            onended="goHome()" 
+            autoplay
+            muted
+            playsinline
+            onended="goHome()"
             poster='/media/poster-horizontal.jpg'>
         您的浏览器不支持 video 标签。
     </video>
@@ -137,14 +137,7 @@
         source.setAttribute('src', videoSrc);
         source.setAttribute('type', 'video/mp4');
         video.appendChild(source);
-
         
-        video.load();
-        video.play().catch(e => {
-        
-        console.warn('Autoplay failed:', e);
-        });
-
         muteToggle.addEventListener('click', () => {
             if (video.muted) {
                 
@@ -156,6 +149,15 @@
                 muteToggle.textContent = '🔇';
             }
         });
+
+        
+        try {
+            video.load();
+            video.play(); 
+        } 
+        catch (e) {
+            console.warn('Autoplay failed, maybe interaction needed:', e);
+        }
 
         function fadeInVolume(video, duration = 1000) {
             let step = 0.05;
