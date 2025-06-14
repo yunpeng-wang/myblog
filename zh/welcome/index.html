@@ -92,6 +92,7 @@
 
     <video id="introVideo"
             autoplay
+            preload="auto"
             muted
             playsinline
             onended="goHome()"
@@ -137,6 +138,11 @@
         source.setAttribute('src', videoSrc);
         source.setAttribute('type', 'video/mp4');
         video.appendChild(source);
+
+        video.addEventListener('canplay', () => {
+            console.log('Video ready, removing poster and fading out volume');
+            video.removeAttribute('poster');
+         });
 
         
         try {
