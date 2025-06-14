@@ -89,7 +89,12 @@
 
 <body>
 
-    <video id="introVideo" autoplay muted playsinline onended="goHome()">
+    <video id="introVideo"
+            autoplay 
+            muted 
+            playsinline 
+            onended="goHome()" 
+            poster="/media/poster-horizontal.jpg">
         Your browser does not support the video tag.
     </video>
 
@@ -112,9 +117,32 @@
         const videoSrc = isPortrait
             ? '\/media\/intro-vertical.mp4'
             : '\/media\/intro-horizontal.mp4';
+        
+        const posterSrc = isPortrait 
+            ? '\/media\/poster-vertical.jpg'
+            : '\/media\/poster-horizontal.jpg';
 
         
         video.src = videoSrc;
+        video.setAttribute('poster', posterSrc);
+
+        
+        while (video.firstChild) {
+        video.removeChild(video.firstChild);
+        }
+
+        
+        const source = document.createElement('source');
+        source.setAttribute('src', videoSrc);
+        source.setAttribute('type', 'video/mp4');
+        video.appendChild(source);
+
+        
+        video.load();
+        video.play().catch(e => {
+        
+        console.warn('Autoplay failed:', e);
+        });
 
         muteToggle.addEventListener('click', () => {
             if (video.muted) {
