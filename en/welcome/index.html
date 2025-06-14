@@ -127,8 +127,26 @@
         video.src = videoSrc;
         video.setAttribute('poster', posterSrc);
 
- 
-       
+        
+        while (video.firstChild) {
+        video.removeChild(video.firstChild);
+        }
+
+        
+        const source = document.createElement('source');
+        source.setAttribute('src', videoSrc);
+        source.setAttribute('type', 'video/mp4');
+        video.appendChild(source);
+
+        
+        try {
+            video.load();
+            video.play(); 
+        } 
+        catch (e) {
+            console.warn('Autoplay failed, maybe interaction needed:', e);
+        }
+        
         muteToggle.addEventListener('click', () => {
             if (video.muted) {
                 
