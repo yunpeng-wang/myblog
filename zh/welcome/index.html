@@ -194,7 +194,9 @@
             document.getElementById('enter-button').classList.add('fade-out');
             document.getElementById('mute-toggle').classList.add('fade-out');
             document.getElementById('domain-name').classList.add('fade-out');
-            fadeOutVolume(document.getElementById('introVideo'));
+            if (!video.muted && video.volume > 0.01) {
+                fadeOutVolume(document.getElementById('introVideo'));
+            }
 
             
             const overlay = document.getElementById('fade-overlay');
