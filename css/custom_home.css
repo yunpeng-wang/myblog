@@ -79,3 +79,28 @@ html[lang="zh"] #clock {
 html[lang="en"] #clock {
   font-family: monospace,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+main {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body:not(.dark) main {
+  background-image: url('/myblog/images/main_bg_light_h.png');
+}
+
+body.dark main {
+  background-image: url('/myblog/images/main_bg_dark_h.png');
+}
+
+@media (max-width: 600px) {
+  body:not(.dark) main {
+  background-image: url('/myblog/images/main_bg_light_v.png');
+}
+
+body.dark main {
+  background-image: url('/myblog/images/main_bg_dark_v.png');
+}
+  
+}
