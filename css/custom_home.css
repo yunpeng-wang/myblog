@@ -87,20 +87,20 @@ main {
 }
 
 body:not(.dark) main {
-  background-image: url('/myblog/images/main_bg_light_h.png');
+  background-image: url('/images/main_bg_light_h.png');
 }
 
 body.dark main {
-  background-image: url('/myblog/images/main_bg_dark_h.png');
+  background-image: url('/images/main_bg_dark_h.png');
 }
 
 @media (max-width: 600px) {
   body:not(.dark) main {
-  background-image: url('/myblog/images/main_bg_light_v.png');
+  background-image: url('/images/main_bg_light_v.png');
 }
 
 body.dark main {
-  background-image: url('/myblog/images/main_bg_dark_v.png');
+  background-image: url('/images/main_bg_dark_v.png');
 }
   
 }
