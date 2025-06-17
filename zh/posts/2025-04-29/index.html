@@ -190,7 +190,9 @@ const themeTransitionEvents = {
 
 
 
-<meta property="og:url" content="https://www.beholdwild.org/zh/posts/2025-04-29/">
+
+
+<link rel="stylesheet" href="/css/custom_global.css"><meta property="og:url" content="https://www.beholdwild.org/zh/posts/2025-04-29/">
   <meta property="og:site_name" content="Behold the Wild">
   <meta property="og:title" content="湖光掠影">
   <meta property="og:description" content="五一深圳观鸟·第四日">
@@ -276,7 +278,17 @@ const themeTransitionEvents = {
 
 <header class="header">
     <nav class="nav">
-        <div class="logo">
+        <div class="logo" style="display:flex; align-items:center;">
+            <img
+                src='/images/title_icon_light.png'
+                class="title-icon light-mode"
+                alt="title bird"
+                style="height:24px; margin-right:0.5em;">
+            <img
+                src='/images/title_icon_dark.png'
+                class="title-icon dark-mode"
+                alt="title bird"
+                style="height:24px; margin-right:0.5em;">
             <a href="https://www.beholdwild.org/zh/" accesskey="h" title="Behold the Wild (Alt + H)">Behold the Wild</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">

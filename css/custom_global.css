@@ -1,0 +1,14 @@
+/* ############################# */
+/* title icon */
+/* ############################# */
+.title-icon {
+  display: none;
+}
+
+body:not(.dark) .title-icon.light-mode {
+  display: inline;
+}
+
+body.dark .title-icon.dark-mode {
+  display: inline;
+}
