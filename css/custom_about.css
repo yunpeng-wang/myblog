@@ -239,7 +239,7 @@ body.dark {
     color:#00b4d8;
 
     opacity: 0;
-    animation: fontFade 0.5s ease-in-out forwards;
+    animation: fontFade 0.6s ease-in-out forwards;
     animation-delay: 0.3s; /* 让字体先加载一会再淡入 */
 }
 
@@ -263,7 +263,7 @@ html[lang="en"] .about-content .about_quote {
   font-size-adjust: 0.4;
 }
 html[lang="zh"] .about-content .about_quote {
-  font-family: MyChineseFont;
-  font-size: 1.4rem;
+  font-family: MyChineseFont-subset;
+  font-size: 1.5rem;
   font-size-adjust: 0.6;
 }
