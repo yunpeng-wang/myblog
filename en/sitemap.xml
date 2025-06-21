@@ -4,6 +4,8 @@
   <url>
     <loc>https://www.beholdwild.org/en/about/</loc>
     <lastmod>2025-05-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -17,6 +19,8 @@
   </url><url>
     <loc>https://www.beholdwild.org/en/</loc>
     <lastmod>2025-05-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -30,6 +34,8 @@
   </url><url>
     <loc>https://www.beholdwild.org/en/posts/</loc>
     <lastmod>2025-05-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -43,6 +49,8 @@
   </url><url>
     <loc>https://www.beholdwild.org/en/gallery/</loc>
     <lastmod>2025-05-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -56,6 +64,8 @@
   </url><url>
     <loc>https://www.beholdwild.org/en/tags/</loc>
     <lastmod>2025-05-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -69,6 +79,8 @@
   </url><url>
     <loc>https://www.beholdwild.org/en/posts/2025-05-11/</loc>
     <lastmod>2025-05-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -82,9 +94,13 @@
   </url><url>
     <loc>https://www.beholdwild.org/en/tags/wildlife/</loc>
     <lastmod>2025-05-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url><url>
     <loc>https://www.beholdwild.org/en/posts/2025-04-30/</loc>
     <lastmod>2025-04-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -98,6 +114,8 @@
   </url><url>
     <loc>https://www.beholdwild.org/en/posts/2025-04-29/</loc>
     <lastmod>2025-04-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -111,6 +129,8 @@
   </url><url>
     <loc>https://www.beholdwild.org/en/posts/2025-04-28/</loc>
     <lastmod>2025-04-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -124,6 +144,8 @@
   </url><url>
     <loc>https://www.beholdwild.org/en/posts/2025-04-27/</loc>
     <lastmod>2025-04-27T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -137,6 +159,8 @@
   </url><url>
     <loc>https://www.beholdwild.org/en/posts/2025-04-26/</loc>
     <lastmod>2025-04-26T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -149,6 +173,8 @@
                 />
   </url><url>
     <loc>https://www.beholdwild.org/en/archives/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -161,6 +187,8 @@
                 />
   </url><url>
     <loc>https://www.beholdwild.org/en/categories/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -173,6 +201,8 @@
                 />
   </url><url>
     <loc>https://www.beholdwild.org/en/contact/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -185,6 +215,8 @@
                 />
   </url><url>
     <loc>https://www.beholdwild.org/en/welcome/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
