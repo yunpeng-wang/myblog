@@ -1,6 +1,1 @@
-User-agent: *
-Disallow: /en/welcome/
-Disallow: /zh/welcome/
-Allow: /
-
 Sitemap: https://www.beholdwild.org/sitemap.xml
