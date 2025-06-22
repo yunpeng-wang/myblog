@@ -1,2 +1,2 @@
-The output powered by hugo and papermod.
+Powered by Hugo and Papermod.
 Visit the site: www.beholdwild.org
