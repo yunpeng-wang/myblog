@@ -165,6 +165,9 @@
             }
         });
 
+        
+
+
         function fadeInVolume(video, duration = 1000) {
             let step = 0.05;
             video.volume = 0.0;
@@ -189,19 +192,16 @@
             }, duration * step); 
         }
 
-        
-
-
         function goHome() {
             sessionStorage.setItem('seenIntro', 'true');
-
+            const video = document.getElementById("introVideo");
             
-            document.getElementById('introVideo').classList.add('fade-out');
+            video.classList.add('fade-out');
             document.getElementById('enter-button').classList.add('fade-out');
             document.getElementById('mute-toggle').classList.add('fade-out');
             document.getElementById('domain-name').classList.add('fade-out');
             if (!video.muted && video.volume > 0.01) {
-                fadeOutVolume(document.getElementById('introVideo'));
+                fadeOutVolume(video);
             }
 
             
