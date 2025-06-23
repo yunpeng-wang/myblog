@@ -96,7 +96,7 @@
             muted
             playsinline
             onended="goHome()"
-            poster='/media/poster-horizontal.jpg'>
+            poster='/media/poster-horizontal.webp'>
         Welcome to my world of wildlife. Your browser does not support the video tag.
     </video>
 
@@ -117,12 +117,12 @@
         
         const isPortrait = window.matchMedia("(orientation: portrait)").matches;
         const videoSrc = isPortrait
-            ? '\/media\/intro-vertical.mp4'
-            : '\/media\/intro-horizontal.mp4';
+            ? '\/media\/intro-vertical.webm'
+            : '\/media\/intro-horizontal.webm';
         
         const posterSrc = isPortrait 
-            ? '\/media\/poster-vertical.jpg'
-            : '\/media\/poster-horizontal.jpg';
+            ? '\/media\/poster-vertical.webp'
+            : '\/media\/poster-horizontal.webp';
 
         
         video.src = videoSrc;
@@ -136,7 +136,7 @@
         
         const source = document.createElement('source');
         source.setAttribute('src', videoSrc);
-        source.setAttribute('type', 'video/mp4');
+        source.setAttribute('type', 'video/webm');
         video.appendChild(source);
 
         video.addEventListener('canplay', () => {
