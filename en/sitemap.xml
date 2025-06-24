@@ -186,20 +186,6 @@
                 href="https://www.beholdwild.org/en/archives/"
                 />
   </url><url>
-    <loc>https://www.beholdwild.org/en/categories/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://www.beholdwild.org/zh/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.beholdwild.org/en/categories/"
-                />
-  </url><url>
     <loc>https://www.beholdwild.org/en/contact/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
