@@ -117,8 +117,8 @@
         
         const isPortrait = window.matchMedia("(orientation: portrait)").matches;
         const videoSrc = isPortrait
-            ? '\/media\/intro-vertical.webm'
-            : '\/media\/intro-horizontal.webm';
+            ? '\/media\/intro-vertical.mp4'
+            : '\/media\/intro-horizontal.mp4';
         
         const posterSrc = isPortrait 
             ? '\/media\/poster-vertical.webp'
@@ -136,7 +136,7 @@
         
         const source = document.createElement('source');
         source.setAttribute('src', videoSrc);
-        source.setAttribute('type', 'video/webm');
+        source.setAttribute('type', 'video/mp4');
         video.appendChild(source);
 
         video.addEventListener('canplay', () => {
