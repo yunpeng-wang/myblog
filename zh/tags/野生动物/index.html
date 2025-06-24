@@ -234,11 +234,11 @@ const themeTransitionEvents = {
   }
 
   body:not(.dark) {
-    --button-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    --button-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
   }
 
   body.dark {
-    --button-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
+    --button-shadow: 0 0 3px rgba(255, 255, 255, 0.4);
   }
 
   #zen-toggle {
@@ -296,6 +296,7 @@ const themeTransitionEvents = {
   function toggleZenMode() {
     const html = document.documentElement;
     const icon = document.getElementById("zen-icon");
+    const audio = document.getElementById("zen-audio");
     const isOn = html.classList.toggle("zen-on");
 
     html.style.setProperty("--zen-duration", "0.9s");
@@ -308,14 +309,45 @@ const themeTransitionEvents = {
     void icon.offsetWidth; 
     icon.classList.add(isOn ? "rotate-forward" : "rotate-back");
 
-    localStorage.setItem("zenMode", isOn ? "on" : "off");
+    sessionStorage.setItem("zenMode", isOn ? "on" : "off"); 
+
+    
+    if (isOn) {
+      
+      try {
+        audio.volume = 0;
+        audio.currentTime = 0;
+        audio.play();
+
+        
+        let vol = 0;
+        const fadeIn = setInterval(() => {
+          vol = Math.min(vol + 0.05, 1);
+          audio.volume = vol;
+          if (vol >= 1) clearInterval(fadeIn);
+        }, 100);
+      } catch (e) {
+        console.warn("Autoplay failed or blocked", e);
+      }
+    } else {
+      
+      let vol = audio.volume;
+      const fadeOut = setInterval(() => {
+        vol = Math.max(vol - 0.05, 0);
+        audio.volume = vol;
+        if (vol <= 0) {
+          clearInterval(fadeOut);
+          audio.pause();
+        }
+      }, 100);
+    }
   }
 
   window.addEventListener("DOMContentLoaded", () => {
     const html = document.documentElement;
     const icon = document.getElementById("zen-icon");
 
-    const isOn = localStorage.getItem("zenMode") === "on";
+    const isOn = sessionStorage.getItem("zenMode") === "on";
     if (isOn) {
       html.classList.add("zen-on", "grayscale");
       icon.style.transform = "rotate(180deg)";
@@ -324,6 +356,7 @@ const themeTransitionEvents = {
     }
   });
 </script>
+<audio id="zen-audio" src='/audios/zen.mp3' preload="auto"></audio>
             </div>
         </div>
         <ul id="menu">
