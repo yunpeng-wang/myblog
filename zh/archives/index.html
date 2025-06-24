@@ -244,6 +244,8 @@ const themeTransitionEvents = {
                 <style>
   :root {
     --zen-duration: 0.9s;
+    --zen-spin-v1: 10s;
+    --zen-spin-v2: 0.5s;
   }
 
   body:not(.dark) {
@@ -265,21 +267,10 @@ const themeTransitionEvents = {
     transition: transform 0.3s ease;
   }
 
-  @keyframes rotate-180 {
+  @keyframes spin {
     from {
       transform: rotate(0deg);
     }
-
-    to {
-      transform: rotate(180deg);
-    }
-  }
-
-  @keyframes rotate-180-back {
-    from {
-      transform: rotate(180deg);
-    }
-
     to {
       transform: rotate(360deg);
     }
@@ -292,12 +283,8 @@ const themeTransitionEvents = {
     filter: drop-shadow(var(--button-shadow));
   }
 
-  #zen-icon.rotate-forward {
-    animation: rotate-180 var(--zen-duration) forwards;
-  }
-
-  #zen-icon.rotate-back {
-    animation: rotate-180-back var(--zen-duration) forwards;
+  #zen-icon.spinning {
+    animation: spin var(--zen-spin-v1) linear infinite;
   }
 </style>
 
@@ -306,6 +293,8 @@ const themeTransitionEvents = {
 </button>
 
 <script>
+  let spinStartTime = null;
+
   function toggleZenMode() {
     const html = document.documentElement;
     const icon = document.getElementById("zen-icon");
@@ -316,17 +305,14 @@ const themeTransitionEvents = {
     html.style.transition = "filter var(--zen-duration) ease";
     html.classList.toggle("grayscale", isOn);
 
-    
-    icon.classList.remove("rotate-forward", "rotate-back");
-    
+    icon.classList.remove("rotate-forward", "rotate-back", "spinning");
     void icon.offsetWidth; 
-    icon.classList.add(isOn ? "rotate-forward" : "rotate-back");
 
-    sessionStorage.setItem("zenMode", isOn ? "on" : "off"); 
-
-    
     if (isOn) {
       
+      icon.classList.add("spinning");
+      spinStartTime = Date.now();
+
       try {
         audio.volume = 0;
         audio.currentTime = 0;
@@ -344,6 +330,24 @@ const themeTransitionEvents = {
       }
     } else {
       
+      const elapsed = Date.now() - spinStartTime;
+      const deg = (elapsed / 10000) * 360; 
+      const remaining = 360 - (deg % 360);
+      const currentRotation = deg % 360;
+
+      icon.style.animation = "none"; 
+      icon.style.transform = `rotate(${currentRotation}deg)`;
+      void icon.offsetWidth;
+
+      icon.style.transition = `transform var(--zen-spin-v2) linear`;
+      icon.style.transform = `rotate(${currentRotation + remaining}deg)`;
+
+      setTimeout(() => {
+        icon.style.transition = "none";
+        icon.style.transform = `rotate(0deg)`;
+      }, 500); 
+
+      
       let vol = audio.volume;
       const fadeOut = setInterval(() => {
         vol = Math.max(vol - 0.05, 0);
@@ -354,18 +358,18 @@ const themeTransitionEvents = {
         }
       }, 100);
     }
+    sessionStorage.setItem("zenMode", isOn ? "on" : "off");
   }
 
   window.addEventListener("DOMContentLoaded", () => {
     const html = document.documentElement;
     const icon = document.getElementById("zen-icon");
-
     const isOn = sessionStorage.getItem("zenMode") === "on";
+    
     if (isOn) {
       html.classList.add("zen-on", "grayscale");
-      icon.style.transform = "rotate(180deg)";
-    } else {
-      icon.style.transform = "rotate(360deg)"; 
+      icon.classList.add("spinning");
+      spinStartTime = Date.now();
     }
   });
 </script>
