@@ -156,7 +156,7 @@ const themeTransitionEvents = {
 </style>
 
 
-<link rel="stylesheet" href="/css/custom_global.min.235caafe6fa3b079e7388d36b544b9c6c7f57ba332cd5f9fe1f8155a600443a7.css">
+<link rel="stylesheet" href="/css/custom_global.min.90ec1b92790cd80b1adbf75850bc2549a9776a2ce951bf91de66577cef92fb1f.css">
 
 
 
@@ -245,6 +245,103 @@ const themeTransitionEvents = {
                             aria-label="🇺🇸 English">🇺🇸 English</a>
                     </li>
                 </ul>
+                <ul>|</ul>
+                <style>
+  :root {
+    --zen-duration: 0.9s;
+  }
+
+  body:not(.dark) {
+    --button-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  }
+
+  body.dark {
+    --button-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
+  }
+
+  #zen-toggle {
+    background: none;
+    border: none;
+    padding: 0.3em;
+    margin-left: 0.3em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+
+  @keyframes rotate-180 {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(180deg);
+    }
+  }
+
+  @keyframes rotate-180-back {
+    from {
+      transform: rotate(180deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  #zen-icon {
+    width: 22px;
+    height: 22px;
+    transform: rotate(0deg);
+    filter: drop-shadow(var(--button-shadow));
+  }
+
+  #zen-icon.rotate-forward {
+    animation: rotate-180 var(--zen-duration) forwards;
+  }
+
+  #zen-icon.rotate-back {
+    animation: rotate-180-back var(--zen-duration) forwards;
+  }
+</style>
+
+<button id="zen-toggle" onclick="toggleZenMode()" title="Zen Mode">
+  <img src='/images/zen-mode.svg' alt="Zen Mode Icon" id="zen-icon" />
+</button>
+
+<script>
+  function toggleZenMode() {
+    const html = document.documentElement;
+    const icon = document.getElementById("zen-icon");
+    const isOn = html.classList.toggle("zen-on");
+
+    html.style.setProperty("--zen-duration", "0.9s");
+    html.style.transition = "filter var(--zen-duration) ease";
+    html.classList.toggle("grayscale", isOn);
+
+    
+    icon.classList.remove("rotate-forward", "rotate-back");
+    
+    void icon.offsetWidth; 
+    icon.classList.add(isOn ? "rotate-forward" : "rotate-back");
+
+    localStorage.setItem("zenMode", isOn ? "on" : "off");
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const html = document.documentElement;
+    const icon = document.getElementById("zen-icon");
+
+    const isOn = localStorage.getItem("zenMode") === "on";
+    if (isOn) {
+      html.classList.add("zen-on", "grayscale");
+      icon.style.transform = "rotate(180deg)";
+    } else {
+      icon.style.transform = "rotate(360deg)"; 
+    }
+  });
+</script>
             </div>
         </div>
         <ul id="menu">
