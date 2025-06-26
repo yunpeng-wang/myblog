@@ -241,7 +241,9 @@ const themeTransitionEvents = {
         top: 0;
         left: 0;
         width: 100vw;
+        height: 100dvh;
         height: 100vh;
+         
         background: black;
         overflow: hidden;
         display: flex;
@@ -284,6 +286,8 @@ const themeTransitionEvents = {
         font-family: sans-serif, monospace;
         letter-spacing: 1px;
         transition: opacity 0.8s ease;
+        opacity: 0;
+        animation: fadeInButton 2s ease forwards;
         z-index: 10000;
     }
 
@@ -301,7 +305,15 @@ const themeTransitionEvents = {
         border-radius: 6px;
         cursor: pointer;
         transition: opacity 0.8s ease;
+        opacity: 0;
+        animation: fadeInButton 2s ease forwards;
         z-index: 10000;
+    }
+
+    @keyframes fadeInButton {
+        to {
+            opacity: 1;
+        }
     }
 
     #fade-overlay {
