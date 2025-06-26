@@ -156,85 +156,152 @@ const themeTransitionEvents = {
   }
 </style>
 
-<link rel="stylesheet" href="/css/custom_home.min.3b831e4c945eecd59e6f22c75442b0793e0db6341c2212c1df80b80f00e4a759.css">
+<link rel="stylesheet" href="/css/custom_home.min.3b831e4c945eecd59e6f22c75442b0793e0db6341c2212c1df80b80f00e4a759.css"><div class="bg-bird-layer">
+    
+</div>
+
 <style>
-    main {
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+    .bg-bird-layer {
+        position: fixed;
+        top: var(--real-header-height);
+        left: var(--gap);
+        width: calc(100vw - var(--gap) * 2);
+        height: calc(100vh - var(--real-header-height) - var(--real-footer-height));
+        z-index: -1;
+        pointer-events: none;
+         
+        padding: var(--gap);
+    }
+
+    .bg-bird-layer img {
+        position: absolute;
+        width: 60px;
+        height: auto;
+        transition: opacity 0.8s ease;
+        opacity: 0;
+    }
+
+    .bg-bird-layer.loaded img {
+        opacity: 0.8;
     }
 </style>
+
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    
-    const bgSets = [
-      {
-        light: {
-          landscape: '\/images\/bg_set1_light_landscape.png',
-          portrait: '\/images\/bg_set1_light_portrait.png'
+    document.addEventListener("DOMContentLoaded", () => {
+        const themes = [
+        {
+            name: "set1",
+            birds: [
+            {
+                light: { src: '\/images\/main_bg\/crane_light.webp', x: 0.88, y: 0.73, width:70 },
+                dark:  { src: '\/images\/main_bg\/crane_dark.webp', x: -0.18, y: 0.73, width:70  }
+            },
+            {
+                light: { src: '\/images\/main_bg\/twobirds_light.webp', x: -0.3, y: 0.3, width:70  },
+                dark:  { src: '\/images\/main_bg\/twobirds_dark.webp', x: 1.0, y: 0.3, width:70  }
+            }
+            ]
         },
-        dark: {
-          landscape: '\/images\/bg_set1_dark_landscape.png',
-          portrait: '\/images\/bg_set1_dark_portrait.png'
-        }
-      },
-      {
-        light: {
-          landscape: '\/images\/bg_set2_light_landscape.png',
-          portrait: '\/images\/bg_set2_light_portrait.png'
+        {
+            name: "set2",
+            birds: [
+            {
+                light: { src: '\/images\/main_bg\/lion_light.webp', x: -0.3, y: 0.75, width:70  },
+                dark:  { src: '\/images\/main_bg\/lion_dark.webp', x: 1.1, y: 0.4, width:70  }
+            },
+            {
+                light: { src: '\/images\/main_bg\/gazelle_light.webp', x: 0.95, y: 0.74, width:70  },
+                dark:  { src: '\/images\/main_bg\/gazelle_dark.webp', x: -0.35, y: 0.4, width:70  }
+            }
+            ]
         },
-        dark: {
-          landscape: '\/images\/bg_set2_dark_landscape.png',
-          portrait: '\/images\/bg_set2_dark_portrait.png'
+        {
+            name: "set3",
+            birds: [
+            {
+                light: { src: '\/images\/main_bg\/eagle_light.webp', x: 1.0, y: 0.3, width:60  },
+                dark:  { src: '\/images\/main_bg\/hawk_dark.webp', x: -0.21, y: 0.7, width:60  }
+            },
+            {
+                light: { src: '\/images\/main_bg\/mouse_light.webp', x: -0.25, y: 0.8, width:40  },
+                dark:  { src: '\/images\/main_bg\/rat_dark.webp', x: -0.25, y: 0.8, width:40  }
+            }
+            ]
         }
-      },
-      {
-        light: {
-          landscape: '\/images\/bg_set3_light_landscape.png',
-          portrait: '\/images\/bg_set3_light_portrait.png'
-        },
-        dark: {
-          landscape: '\/images\/bg_set3_dark_landscape.png',
-          portrait: '\/images\/bg_set3_dark_portrait.png'
+        ];
+        const sel_theme = themes[Math.floor(Math.random() * themes.length)];
+
+        function isMobile() {
+            return window.innerWidth < 600;  
         }
-      }
-      
-    ];
+        
+        function waitForProfileInner(callback, retries = 20) {
+            const el = document.querySelector(".profile_inner");
+            if (el) {
+                callback(el);
+            } else if (retries > 0) {
+                setTimeout(() => waitForProfileInner(callback, retries - 1), 200);
+            } else {
+                console.warn("⚠️ .profile_inner not found after retries.");
+            }
+        }
 
-    const chosen = bgSets[Math.floor(Math.random() * bgSets.length)];
-    const mainEl = document.querySelector("main");
+        function updateBirdLayerBounds() {
+            const header = document.querySelector("header");
+            const footer = document.querySelector("footer");
+            const birdLayer = document.querySelector(".bg-bird-layer");
+            if (!header || !footer || !birdLayer) return;
 
-    function getOrientation() {
-      return window.innerWidth > window.innerHeight ? 'landscape' : 'portrait';
-    }
+            const headerHeight = header.offsetHeight;
+            const footerHeight = footer.offsetHeight;
 
-    function updateBackground() {
-      const isDark = document.body.classList.contains("dark");
-      const theme = isDark ? chosen.dark : chosen.light;
-      const orientation = getOrientation();
-      const bgUrl = theme[orientation];
-      if (mainEl) {
-        mainEl.style.backgroundImage = `url('${bgUrl}')`;
-      }
-    }
+            document.documentElement.style.setProperty('--real-header-height', `${headerHeight}px`);
+            document.documentElement.style.setProperty('--real-footer-height', `${footerHeight}px`);
+        }
 
-    
-    updateBackground();
+        function updateBackground() {
+            if(!(isMobile())){
+                const isDark = document.body.classList.contains("dark");
+                const birdLayer = document.querySelector(".bg-bird-layer");
+                const anchor = document.querySelector(".profile_inner");
+                const rect = anchor.getBoundingClientRect();
 
-    
-    const observer = new MutationObserver(updateBackground);
-    observer.observe(document.body, {
-      attributes: true,
-      attributeFilter: ["class"]
+                birdLayer.innerHTML = "";
+                
+                sel_theme.birds.forEach(b => {
+                    const config = isDark ? b.dark : b.light;
+                    const img = document.createElement("img");
+                    img.src = config.src;
+                    img.style.position = "absolute";
+                    img.style.top = `${rect.top + rect.height * config.y}px`;
+                    img.style.left = `${rect.left + rect.width * config.x}px`;
+                    img.style.width = (config.width || 60) + "px";
+                    img.style.opacity = config.opacity ?? 0.8;
+                    img.style.zIndex = config.z ?? "auto";
+                    birdLayer.appendChild(img);
+                });
+            }
+        }
+
+        updateBirdLayerBounds()
+        waitForProfileInner(() => {
+            updateBackground();
+        });
+
+        
+        const observer = new MutationObserver(updateBackground);
+        observer.observe(document.body, {
+            attributes: true,
+            attributeFilter: ["class"]
+        });
+
+        
+        window.addEventListener('resize', () => {
+            updateBirdLayerBounds();
+            updateBackground();
+        });
     });
-
-    
-    window.addEventListener('resize', () => {
-      updateBackground();
-    });
-  });
 </script>
-
 
 
 <link rel="stylesheet" href="/css/custom_global.min.90ec1b92790cd80b1adbf75850bc2549a9776a2ce951bf91de66577cef92fb1f.css">
@@ -264,7 +331,7 @@ const themeTransitionEvents = {
   "description": "To behold the wild, and be beheld in return.",
   "logo": "https://www.beholdwild.org/favicon.png",
   "sameAs": [
-      "https://ebird.org/profile/MzU1ODI4Mg/world", "https://www.youtube.com/@dandelion-wang", "https://space.bilibili.com/12855103"
+      "https://ebird.org/profile/MzU1ODI4Mg/world", "https://www.youtube.com/@yunpeng-wang", "https://space.bilibili.com/12855103"
   ]
 }
 </script>
@@ -531,7 +598,7 @@ const themeTransitionEvents = {
     <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
 </svg>
     </a>
-    <a href="https://www.youtube.com/@dandelion-wang" target="_blank" rel="noopener noreferrer me"
+    <a href="https://www.youtube.com/@yunpeng-wang" target="_blank" rel="noopener noreferrer me"
         title="YouTube">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
     stroke-linecap="round" stroke-linejoin="round">
