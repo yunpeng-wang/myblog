@@ -223,6 +223,215 @@ const themeTransitionEvents = {
 </head>
 
 <body class="list dark" id="top">
+    
+        <div id="intro-overlay">
+    <video id="introVideo" autoplay muted playsinline preload="auto"
+        poster='/media/poster-horizontal.webp'>
+        欢迎来到我的野生动物世界。您的浏览器不支持 video 标签。
+    </video>
+    <button id="mute-toggle">🔇</button>
+    <div id="domain-name">BeholdWild.org</div>
+    <button id="enter-button" onclick="skipIntro()">⏭ 跳过 / Skip</button>
+    <div id="fade-overlay"></div>
+</div>
+
+<style>
+    #intro-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        z-index: 9999;
+    }
+
+    #introVideo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #mute-toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 1.5rem;
+        color: rgb(255, 255, 255, 0.6);
+        background: rgba(0, 0, 0, 0.3);
+        border: none;
+        padding: 5px;
+        cursor: pointer;
+        z-index: 100;
+        border-radius: 6px;
+        transition: opacity 0.8s ease;
+        z-index: 10000;
+    }
+
+    #domain-name {
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: rgb(255, 255, 255, 0.7);
+        padding: 10px 20px;
+        font-size: 1rem;
+        font-weight: bold;
+        font-family: sans-serif, monospace;
+        letter-spacing: 1px;
+        transition: opacity 0.8s ease;
+        z-index: 10000;
+    }
+
+    #enter-button {
+        position: absolute;
+        text-align: center;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.4);
+        color: rgb(255, 255, 255, 0.6);
+        border: 1px solid rgb(255, 255, 255, 0.4);
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: opacity 0.8s ease;
+        z-index: 10000;
+    }
+
+    #fade-overlay {
+        position: fixed;
+        inset: 0;
+        background: black;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 1.0s ease;
+        z-index: 10001;
+    }
+
+    .fade-out {
+        opacity: 0;
+    }
+
+    .show-overlay {
+        opacity: 1;
+    }
+</style>
+
+<script>
+    const seenIntro = sessionStorage.getItem('seenIntro');
+    const overlay = document.getElementById('intro-overlay');
+    const video = document.getElementById('introVideo');
+    const muteToggle = document.getElementById('mute-toggle');
+
+    function hideIntro() {
+        overlay.style.display = 'none';
+    }
+
+    function skipIntro() {
+        video.classList.add('fade-out');
+        document.getElementById('enter-button').classList.add('fade-out');
+        document.getElementById('mute-toggle').classList.add('fade-out');
+        document.getElementById('domain-name').classList.add('fade-out');
+        if (!video.muted && video.volume > 0.01) {
+            fadeOutVolume(video);
+        }
+
+        const overlay = document.getElementById('fade-overlay');
+        overlay.classList.add('show-overlay');
+
+        
+        setTimeout(() => {
+            sessionStorage.setItem('seenIntro', 'true');
+            hideIntro();
+        }, 1000);
+    }
+
+    function fadeInVolume(video, duration = 1000) {
+        let step = 0.05;
+        video.volume = 0.0;
+        const interval = setInterval(() => {
+            if (video.volume < 1.0) {
+                video.volume = Math.min(1.0, video.volume + step);
+            } else {
+                clearInterval(interval);
+            }
+        }, duration * step); 
+    }
+
+    function fadeOutVolume(video, duration = 1000) {
+        let step = 0.05;
+        video.volume = 1.0;
+        const interval = setInterval(() => {
+            if (video.volume > 0) {
+                video.volume = Math.max(0, video.volume - step);
+            } else {
+                clearInterval(interval);
+            }
+        }, duration * step); 
+    }
+
+    
+    const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+    const videoSrc = isPortrait
+        ? '\/media\/intro-vertical.mp4'
+        : '\/media\/intro-horizontal.mp4';
+
+    const posterSrc = isPortrait
+        ? '\/media\/poster-vertical.webp'
+        : '\/media\/poster-horizontal.webp';
+
+    
+    video.src = videoSrc;
+    video.setAttribute('poster', posterSrc);
+
+    
+    while (video.firstChild) {
+        video.removeChild(video.firstChild);
+    }
+
+    
+    const source = document.createElement('source');
+    source.setAttribute('src', videoSrc);
+    source.setAttribute('type', 'video/mp4');
+    video.appendChild(source);
+
+    
+    
+    
+    
+
+    try {
+        video.load();
+        video.play(); 
+    }
+    catch (e) {
+        console.warn('Autoplay failed, maybe interaction needed:', e);
+    }
+
+    muteToggle.addEventListener('click', () => {
+        if (video.muted) {
+            
+            video.muted = false;
+            fadeInVolume(video);
+            muteToggle.textContent = '🔊';
+        } else {
+            video.muted = true;
+            muteToggle.textContent = '🔇';
+        }
+    });
+
+    if (seenIntro) {
+        hideIntro();
+    } else {
+        video.addEventListener('ended', () => {
+            sessionStorage.setItem('seenIntro', 'true');
+            hideIntro();
+        });
+    }
+</script>
+    
 <script>
     if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
@@ -371,26 +580,7 @@ const themeTransitionEvents = {
         </ul>
     </nav>
 </header>
-<main class="main">
-  <script>
-    const seenIntro = sessionStorage.getItem('seenIntro');
-    const path = window.location.pathname;
-    const base = "\/".replace(/\/$/, '');
-
-    const shouldRedirect = (
-      (path.endsWith("/zh/") || path.endsWith("/zh")) &&
-      !seenIntro
-    );
-
-    if (shouldRedirect) {
-      sessionStorage.setItem('seenIntro', 'true');  
-      window.location.replace(`${base}/zh/welcome/`);
-    }
-  </script>
-  
-
-  
-  <div class="profile">
+<main class="main"><div class="profile">
     <div class="profile_inner">
         <img draggable="false" src="https://www.beholdwild.org/images/avatar.png" alt=" profile image"
             title="" height="250"
@@ -449,7 +639,6 @@ const themeTransitionEvents = {
         <script src="/js/home-clock.js" defer></script>
     </div>
 </div>
-
     </main>
     
 <footer class="footer">

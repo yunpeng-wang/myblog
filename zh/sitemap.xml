@@ -172,20 +172,6 @@
                 href="https://www.beholdwild.org/zh/posts/2025-04-26/"
                 />
   </url><url>
-    <loc>https://www.beholdwild.org/zh/welcome/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.beholdwild.org/en/welcome/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://www.beholdwild.org/zh/welcome/"
-                />
-  </url><url>
     <loc>https://www.beholdwild.org/zh/archives/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

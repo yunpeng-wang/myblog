@@ -199,19 +199,5 @@
                 hreflang="en"
                 href="https://www.beholdwild.org/en/contact/"
                 />
-  </url><url>
-    <loc>https://www.beholdwild.org/en/welcome/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://www.beholdwild.org/zh/welcome/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.beholdwild.org/en/welcome/"
-                />
   </url>
 </urlset>
