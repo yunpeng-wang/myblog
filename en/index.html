@@ -240,19 +240,15 @@ const themeTransitionEvents = {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
+        width: 100%;
+        height: 100%;
         background: black;
         z-index: 9999;
     }
 
     #introVideo {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
     }
 
@@ -330,7 +326,11 @@ const themeTransitionEvents = {
     const muteToggle = document.getElementById('mute-toggle');
 
     function isIOS() {
-        return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        const ua = navigator.userAgent;
+        const isIphoneOrIpod = /iPhone|iPod/.test(ua);
+        const isIPad = /iPad/.test(ua) ||
+            (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+        return isIphoneOrIpod || isIPad;
     }
 
     function hideIntro() {
