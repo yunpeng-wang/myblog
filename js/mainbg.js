@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const sel_theme = themes[Math.floor(Math.random() * themes.length)];
 
     function isMobile() {
-        return window.innerWidth < 600;  // 你可以根据实际调大或调小这个数值
+        return Math.min(window.innerWidth, window.innerHeight) < 600;  // 你可以根据实际调大或调小这个数值
     }
     
     function waitForProfileInner(callback, retries = 20) {
