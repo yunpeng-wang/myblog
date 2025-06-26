@@ -338,13 +338,13 @@ const themeTransitionEvents = {
 
     @media (max-width: 480px) {
         :root {
-            --adjust_dist: 60px;
+            --adjust_dist: 70px;
         }
     }
 
     @media (min-width: 481px) and (max-width: 768px) {
         :root {
-            --adjust_dist: 20px;
+            --adjust_dist: 30px;
         }
     }
 </style>
@@ -415,42 +415,44 @@ const themeTransitionEvents = {
         }, duration * step); 
     }
 
-    
-    const isPortrait = window.matchMedia("(orientation: portrait)").matches;
-    const videoSrc = isPortrait
-        ? '\/media\/intro-vertical.mp4'
-        : '\/media\/intro-horizontal.mp4';
+    function playvideo() {
+        
+        const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+        const videoSrc = isPortrait
+            ? '\/media\/intro-vertical.mp4'
+            : '\/media\/intro-horizontal.mp4';
 
-    const posterSrc = isPortrait
-        ? '\/media\/poster-vertical.webp'
-        : '\/media\/poster-horizontal.webp';
+        const posterSrc = isPortrait
+            ? '\/media\/poster-vertical.webp'
+            : '\/media\/poster-horizontal.webp';
+        
+        video.src = videoSrc;
+        video.setAttribute('poster', posterSrc);
 
-    
-    video.src = videoSrc;
-    video.setAttribute('poster', posterSrc);
+        
+        while (video.firstChild) {
+            video.removeChild(video.firstChild);
+        }
 
-    
-    while (video.firstChild) {
-        video.removeChild(video.firstChild);
-    }
+        
+        const source = document.createElement('source');
+        source.setAttribute('src', videoSrc);
+        source.setAttribute('type', 'video/mp4');
+        video.appendChild(source);
 
-    
-    const source = document.createElement('source');
-    source.setAttribute('src', videoSrc);
-    source.setAttribute('type', 'video/mp4');
-    video.appendChild(source);
+        
+        
+        
+        
 
-    
-    
-    
-    
+        try {
+            video.load();
+            video.play(); 
+        }
+        catch (e) {
+            console.warn('Autoplay failed, maybe interaction needed:', e);
+        }
 
-    try {
-        video.load();
-        video.play(); 
-    }
-    catch (e) {
-        console.warn('Autoplay failed, maybe interaction needed:', e);
     }
 
     muteToggle.addEventListener('click', () => {
@@ -467,6 +469,15 @@ const themeTransitionEvents = {
         }
     });
 
+    if (seenIntro) {
+        hideIntro();
+    } else {
+        playvideo();
+        video.addEventListener('ended', () => {
+            sessionStorage.setItem('seenIntro', 'true');
+            hideIntro();
+        });
+    }
 </script>
     
 <script>
