@@ -252,12 +252,12 @@ const themeTransitionEvents = {
             
             
             <img
-                src="/images/title_icon_light.55a955f64f7e2c43d5f52994a1d8fa8c607b77d35efb2cc9fa7a7150dafc74e6.png"
+                src="/images/title_icon_light.269107401303a30a8880428d0d346283f28c56351270377b7e186360721df4ea.webp"
                 class="title-icon light-mode"
                 alt="title bird"
                 style="height:24px; margin-right:0.5em;">
             <img
-                src="/images/title_icon_dark.2a5dd7afb33bb1c44a676f58812c71b847aee07c99fc5fc365af990126c84c54.png"
+                src="/images/title_icon_dark.d9fc876f13ef7be02fdabb46f8a6b57e8e1096fab46cb9f24121f2dd63431d3d.webp"
                 class="title-icon dark-mode"
                 alt="title bird"
                 style="height:24px; margin-right:0.5em;">
@@ -349,88 +349,8 @@ const themeTransitionEvents = {
   </span>
 </button>
 
-<script>
-  let spinStartTime = null;
-
-  function toggleZenMode() {
-    const html = document.documentElement;
-    const icon = document.getElementById("zen-icon");
-    const audio = document.getElementById("zen-audio");
-    const isOn = html.classList.toggle("zen-on");
-
-    html.style.setProperty("--zen-duration", "0.9s");
-    html.style.transition = "filter var(--zen-duration) ease";
-    html.classList.toggle("grayscale", isOn);
-
-    icon.classList.remove("rotate-forward", "rotate-back", "spinning");
-    void icon.offsetWidth; 
-
-    if (isOn) {
-      
-      icon.classList.add("spinning");
-      spinStartTime = Date.now();
-
-      try {
-        audio.volume = 0;
-        audio.currentTime = 0;
-        audio.play();
-
-        
-        let vol = 0;
-        const fadeIn = setInterval(() => {
-          vol = Math.min(vol + 0.05, 1);
-          audio.volume = vol;
-          if (vol >= 1) clearInterval(fadeIn);
-        }, 100);
-      } catch (e) {
-        console.warn("Autoplay failed or blocked", e);
-      }
-    } else {
-      
-      const elapsed = Date.now() - spinStartTime;
-      const deg = (elapsed / 10000) * 360; 
-      const remaining = 360 - (deg % 360);
-      const currentRotation = deg % 360;
-
-      icon.style.animation = "none"; 
-      icon.style.transform = `rotate(${currentRotation}deg)`;
-      void icon.offsetWidth;
-
-      icon.style.transition = `transform var(--zen-spin-v2) linear`;
-      icon.style.transform = `rotate(${currentRotation + remaining}deg)`;
-
-      setTimeout(() => {
-        icon.style.transition = "none";
-        icon.style.transform = `rotate(0deg)`;
-      }, 500); 
-
-      
-      let vol = audio.volume;
-      const fadeOut = setInterval(() => {
-        vol = Math.max(vol - 0.05, 0);
-        audio.volume = vol;
-        if (vol <= 0) {
-          clearInterval(fadeOut);
-          audio.pause();
-        }
-      }, 100);
-    }
-    sessionStorage.setItem("zenMode", isOn ? "on" : "off");
-  }
-
-  window.addEventListener("DOMContentLoaded", () => {
-    const html = document.documentElement;
-    const icon = document.getElementById("zen-icon");
-    const isOn = sessionStorage.getItem("zenMode") === "on";
-    
-    if (isOn) {
-      html.classList.add("zen-on", "grayscale");
-      icon.classList.add("spinning");
-      spinStartTime = Date.now();
-    }
-  });
-</script>
 <audio id="zen-audio" src='/audios/zen.mp3' preload="auto"></audio>
+                <script src="/js/zen-button.js" defer></script>
             </div>
         </div>
         <ul id="menu">

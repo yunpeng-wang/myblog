@@ -185,123 +185,8 @@ const themeTransitionEvents = {
         opacity: 0.8;
     }
 </style>
+<script src="/js/mainbg.js" defer></script>
 
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const themes = [
-        {
-            name: "set1",
-            birds: [
-            {
-                light: { src: '\/images\/main_bg\/crane_light.webp', x: 0.88, y: 0.73, width:70 },
-                dark:  { src: '\/images\/main_bg\/crane_dark.webp', x: -0.18, y: 0.73, width:70  }
-            },
-            {
-                light: { src: '\/images\/main_bg\/twobirds_light.webp', x: -0.3, y: 0.3, width:70  },
-                dark:  { src: '\/images\/main_bg\/twobirds_dark.webp', x: 1.0, y: 0.3, width:70  }
-            }
-            ]
-        },
-        {
-            name: "set2",
-            birds: [
-            {
-                light: { src: '\/images\/main_bg\/lion_light.webp', x: -0.3, y: 0.75, width:70  },
-                dark:  { src: '\/images\/main_bg\/lion_dark.webp', x: 1.1, y: 0.4, width:70  }
-            },
-            {
-                light: { src: '\/images\/main_bg\/gazelle_light.webp', x: 0.95, y: 0.74, width:70  },
-                dark:  { src: '\/images\/main_bg\/gazelle_dark.webp', x: -0.35, y: 0.4, width:70  }
-            }
-            ]
-        },
-        {
-            name: "set3",
-            birds: [
-            {
-                light: { src: '\/images\/main_bg\/eagle_light.webp', x: 1.0, y: 0.3, width:60  },
-                dark:  { src: '\/images\/main_bg\/hawk_dark.webp', x: -0.21, y: 0.7, width:60  }
-            },
-            {
-                light: { src: '\/images\/main_bg\/mouse_light.webp', x: -0.25, y: 0.8, width:40  },
-                dark:  { src: '\/images\/main_bg\/rat_dark.webp', x: -0.25, y: 0.8, width:40  }
-            }
-            ]
-        }
-        ];
-        const sel_theme = themes[Math.floor(Math.random() * themes.length)];
-
-        function isMobile() {
-            return window.innerWidth < 600;  
-        }
-        
-        function waitForProfileInner(callback, retries = 20) {
-            const el = document.querySelector(".profile_inner");
-            if (el) {
-                callback(el);
-            } else if (retries > 0) {
-                setTimeout(() => waitForProfileInner(callback, retries - 1), 200);
-            } else {
-                console.warn("⚠️ .profile_inner not found after retries.");
-            }
-        }
-
-        function updateBirdLayerBounds() {
-            const header = document.querySelector("header");
-            const footer = document.querySelector("footer");
-            const birdLayer = document.querySelector(".bg-bird-layer");
-            if (!header || !footer || !birdLayer) return;
-
-            const headerHeight = header.offsetHeight;
-            const footerHeight = footer.offsetHeight;
-
-            document.documentElement.style.setProperty('--real-header-height', `${headerHeight}px`);
-            document.documentElement.style.setProperty('--real-footer-height', `${footerHeight}px`);
-        }
-
-        function updateBackground() {
-            if(!(isMobile())){
-                const isDark = document.body.classList.contains("dark");
-                const birdLayer = document.querySelector(".bg-bird-layer");
-                const anchor = document.querySelector(".profile_inner");
-                const rect = anchor.getBoundingClientRect();
-
-                birdLayer.innerHTML = "";
-                
-                sel_theme.birds.forEach(b => {
-                    const config = isDark ? b.dark : b.light;
-                    const img = document.createElement("img");
-                    img.src = config.src;
-                    img.style.position = "absolute";
-                    img.style.top = `${rect.top + rect.height * config.y}px`;
-                    img.style.left = `${rect.left + rect.width * config.x}px`;
-                    img.style.width = (config.width || 60) + "px";
-                    img.style.opacity = config.opacity ?? 0.8;
-                    img.style.zIndex = config.z ?? "auto";
-                    birdLayer.appendChild(img);
-                });
-            }
-        }
-
-        updateBirdLayerBounds()
-        waitForProfileInner(() => {
-            updateBackground();
-        });
-
-        
-        const observer = new MutationObserver(updateBackground);
-        observer.observe(document.body, {
-            attributes: true,
-            attributeFilter: ["class"]
-        });
-
-        
-        window.addEventListener('resize', () => {
-            updateBirdLayerBounds();
-            updateBackground();
-        });
-    });
-</script>
 
 
 <link rel="stylesheet" href="/css/custom_global.min.90ec1b92790cd80b1adbf75850bc2549a9776a2ce951bf91de66577cef92fb1f.css">
@@ -351,12 +236,12 @@ const themeTransitionEvents = {
             
             
             <img
-                src="/images/title_icon_light.55a955f64f7e2c43d5f52994a1d8fa8c607b77d35efb2cc9fa7a7150dafc74e6.png"
+                src="/images/title_icon_light.269107401303a30a8880428d0d346283f28c56351270377b7e186360721df4ea.webp"
                 class="title-icon light-mode"
                 alt="title bird"
                 style="height:24px; margin-right:0.5em;">
             <img
-                src="/images/title_icon_dark.2a5dd7afb33bb1c44a676f58812c71b847aee07c99fc5fc365af990126c84c54.png"
+                src="/images/title_icon_dark.d9fc876f13ef7be02fdabb46f8a6b57e8e1096fab46cb9f24121f2dd63431d3d.webp"
                 class="title-icon dark-mode"
                 alt="title bird"
                 style="height:24px; margin-right:0.5em;">
@@ -448,88 +333,8 @@ const themeTransitionEvents = {
   </span>
 </button>
 
-<script>
-  let spinStartTime = null;
-
-  function toggleZenMode() {
-    const html = document.documentElement;
-    const icon = document.getElementById("zen-icon");
-    const audio = document.getElementById("zen-audio");
-    const isOn = html.classList.toggle("zen-on");
-
-    html.style.setProperty("--zen-duration", "0.9s");
-    html.style.transition = "filter var(--zen-duration) ease";
-    html.classList.toggle("grayscale", isOn);
-
-    icon.classList.remove("rotate-forward", "rotate-back", "spinning");
-    void icon.offsetWidth; 
-
-    if (isOn) {
-      
-      icon.classList.add("spinning");
-      spinStartTime = Date.now();
-
-      try {
-        audio.volume = 0;
-        audio.currentTime = 0;
-        audio.play();
-
-        
-        let vol = 0;
-        const fadeIn = setInterval(() => {
-          vol = Math.min(vol + 0.05, 1);
-          audio.volume = vol;
-          if (vol >= 1) clearInterval(fadeIn);
-        }, 100);
-      } catch (e) {
-        console.warn("Autoplay failed or blocked", e);
-      }
-    } else {
-      
-      const elapsed = Date.now() - spinStartTime;
-      const deg = (elapsed / 10000) * 360; 
-      const remaining = 360 - (deg % 360);
-      const currentRotation = deg % 360;
-
-      icon.style.animation = "none"; 
-      icon.style.transform = `rotate(${currentRotation}deg)`;
-      void icon.offsetWidth;
-
-      icon.style.transition = `transform var(--zen-spin-v2) linear`;
-      icon.style.transform = `rotate(${currentRotation + remaining}deg)`;
-
-      setTimeout(() => {
-        icon.style.transition = "none";
-        icon.style.transform = `rotate(0deg)`;
-      }, 500); 
-
-      
-      let vol = audio.volume;
-      const fadeOut = setInterval(() => {
-        vol = Math.max(vol - 0.05, 0);
-        audio.volume = vol;
-        if (vol <= 0) {
-          clearInterval(fadeOut);
-          audio.pause();
-        }
-      }, 100);
-    }
-    sessionStorage.setItem("zenMode", isOn ? "on" : "off");
-  }
-
-  window.addEventListener("DOMContentLoaded", () => {
-    const html = document.documentElement;
-    const icon = document.getElementById("zen-icon");
-    const isOn = sessionStorage.getItem("zenMode") === "on";
-    
-    if (isOn) {
-      html.classList.add("zen-on", "grayscale");
-      icon.classList.add("spinning");
-      spinStartTime = Date.now();
-    }
-  });
-</script>
 <audio id="zen-audio" src='/audios/zen.mp3' preload="auto"></audio>
+                <script src="/js/zen-button.js" defer></script>
             </div>
         </div>
         <ul id="menu">
@@ -639,22 +444,7 @@ const themeTransitionEvents = {
             </a>
         </div>
         <div id="clock"></div>
-
-        <script>
-            function updateClock() {
-                const now = new Date();
-                const options = {
-                    weekday: 'short', year: 'numeric', month: 'short',
-                    day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit'
-                };
-                const lang = document.documentElement.lang || 'en'; 
-                document.getElementById('clock').textContent =
-                    now.toLocaleString(lang, options);
-            }
-
-            setInterval(updateClock, 1000);
-            updateClock();
-        </script>
+        <script src="/js/home-clock.js" defer></script>
     </div>
 </div>
 
