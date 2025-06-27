@@ -1,5 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
   // 初始化 lightbox
+  if (typeof GLightbox !== "function") {
+    console.error("GLightbox unloaded, initialization failed.");
+    return;
+  }
+
   const lightbox = GLightbox({ selector: '.glightbox' });
   const mainEl = document.querySelector('main.main');
 
