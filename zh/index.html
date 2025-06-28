@@ -177,15 +177,21 @@ const themeTransitionEvents = {
         position: absolute;
         width: 60px;
         height: auto;
-        transition: opacity 0.8s ease;
-        opacity: 0;
+        transform: scale(0.8);
     }
 
-    .bg-bird-layer.loaded img {
-        opacity: 0.8;
+    @keyframes imgFade {
+        from {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
     }
-</style>
-<script src="/js/mainbg.js" defer></script>
+</style><script src="/js/mainbg.js" defer></script>
 
 
 
