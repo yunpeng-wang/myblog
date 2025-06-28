@@ -397,6 +397,7 @@ const themeTransitionEvents = {
         if (!isPortrait) {
             video.style.aspectRatio = "16/9";
             video.style.width = "90vw";
+            video.style.maxHeight = "90vh";
 
             if (screenRatio > 1.7) {
                 video.style.maxHeight = "85vh";
@@ -404,10 +405,11 @@ const themeTransitionEvents = {
         }
         else {
             video.style.aspectRatio = "2/3";
+            video.style.maxHeight = "85vh";
             if (window.matchMedia("(max-width: 480px)").matches) {
-                video.style.width = "46vh";
+                video.style.width = "98vw";
             } else {
-                video.style.width = "58vh";
+                video.style.width = "90vw";
             }
 
         }
