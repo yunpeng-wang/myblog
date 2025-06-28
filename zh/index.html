@@ -263,7 +263,7 @@ const themeTransitionEvents = {
         object-fit: cover;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         border-radius: 10px;
-        margin-top: 4vh;
+        margin-top: 5vh;
     }
 
     #button-layout {
@@ -433,11 +433,11 @@ const themeTransitionEvents = {
             }
         }
         else {
-            video.style.aspectRatio = "9/16";
-            if (window.matchMedia("(max-width: 600px)").matches) {
-                video.style.height = "80vh";
+            video.style.aspectRatio = "2/3";
+            if (window.matchMedia("(max-width: 480px)").matches) {
+                video.style.width = "45vh";
             } else {
-                video.style.height = "90vh";
+                video.style.width = "58vh";
             }
 
         }
