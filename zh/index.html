@@ -240,7 +240,6 @@ const themeTransitionEvents = {
         <button id="mute-toggle">🔇</button>
     </div>
     <div id="domain-name">BeholdWild.org</div>
-    <div id="fade-overlay"></div>
 </div>
 
 <style>
@@ -253,7 +252,7 @@ const themeTransitionEvents = {
         align-items: center;
         justify-content: flex-start;
         background: url('/media/intro_bg.webp'),
-        linear-gradient(to bottom, rgb(50, 50, 50), rgb(120, 120, 120));
+                    linear-gradient(to bottom, rgb(40, 40, 40), rgb(110, 110, 110));
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -264,6 +263,7 @@ const themeTransitionEvents = {
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         border-radius: 10px;
         margin-top: 5vh;
+        transition: opacity 0.8s ease;
     }
 
     #button-layout {
@@ -284,8 +284,6 @@ const themeTransitionEvents = {
         cursor: pointer;
         border-radius: 6px;
         transition: opacity 0.8s ease;
-        opacity: 0;
-        animation: fadeInButton 2s ease forwards;
         z-index: 10000;
     }
 
@@ -298,8 +296,6 @@ const themeTransitionEvents = {
         border-radius: 6px;
         cursor: pointer;
         transition: opacity 0.8s ease;
-        opacity: 0;
-        animation: fadeInButton 2s ease forwards;
         z-index: 10000;
     }
 
@@ -313,34 +309,13 @@ const themeTransitionEvents = {
         font-family: sans-serif, monospace;
         letter-spacing: 1px;
         transition: opacity 0.8s ease;
-        opacity: 0;
-        animation: fadeInButton 2s ease forwards;
         z-index: 10000;
-    }
-
-    @keyframes fadeInButton {
-        to {
-            opacity: 1;
-        }
-    }
-
-    #fade-overlay {
-        position: fixed;
-        inset: 0;
-        background: black;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 1.0s ease;
-        z-index: 10001;
     }
 
     .fade-out {
         opacity: 0;
     }
 
-    .show-overlay {
-        opacity: 1;
-    }
 </style>
 
 <script>
@@ -374,9 +349,6 @@ const themeTransitionEvents = {
         else {
             video.muted = true;
         }
-
-        const overlay = document.getElementById('fade-overlay');
-        overlay.classList.add('show-overlay');
 
         
         setTimeout(() => {
@@ -422,7 +394,6 @@ const themeTransitionEvents = {
         
 
         const screenRatio = window.innerWidth / window.innerHeight;
-        console.log(screenRatio)
 
         if (!isPortrait) {
             video.style.aspectRatio = "16/9";
