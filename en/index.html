@@ -236,8 +236,13 @@ const themeTransitionEvents = {
         Welcome to my world of wildlife. Your browser does not support the video tag.
     </video>
     <div id="button-layout">
-        <button id="enter-button" onclick="skipIntro()">⏭ 跳过 / Skip</button>
-        <button id="mute-toggle">🔇</button>
+        <button id="enter-button" type="button" onclick="skipIntro()">
+            <img id="skip-icon" src='/media/skip.webp' alt="skip Icon">
+            跳过 / Skip</button>
+        <button id="mute-toggle" type="button">
+            <img id="mute-icon" src='/media/mute.webp' alt="mute Icon">
+            <img id="unmute-icon" src='/media/unmute.webp' alt="unmute Icon">
+        </button>
     </div>
     <div id="domain-name">BeholdWild.org</div>
 </div>
@@ -276,7 +281,6 @@ const themeTransitionEvents = {
     }
 
     #mute-toggle {
-        font-size: 1.3rem;
         color: rgb(255, 255, 255, 0.6);
         background: rgba(0, 0, 0, 0.3);
         border: none;
@@ -285,18 +289,41 @@ const themeTransitionEvents = {
         border-radius: 6px;
         transition: opacity 0.8s ease;
         z-index: 10000;
+        align-items: center;
+        padding: 5px 10px;
+    }
+
+    #mute-toggle img {
+        width: 1.2em;
+        height: 1.2em;
+        opacity: 0.7;
+        vertical-align: -0.2em;
     }
 
     #enter-button {
         text-align: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
         background: rgba(0, 0, 0, 0.3);
         color: rgb(255, 255, 255, 0.6);
-        padding: 10px 20px;
-        font-size: 0.8rem;
+        padding: 8px 18px;
+        font-size: 0.9rem;
         border-radius: 6px;
         cursor: pointer;
         transition: opacity 0.8s ease;
         z-index: 10000;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    #enter-button img {
+        width: 1.5em;
+        height: 1.5em;
+        margin-right: 0.5em;
+        vertical-align: baseline;
+        opacity: 0.7;
     }
 
     #domain-name {
@@ -322,6 +349,11 @@ const themeTransitionEvents = {
     const overlay = document.getElementById('intro-overlay');
     const video = document.getElementById('introVideo');
     const muteToggle = document.getElementById('mute-toggle');
+    const mutedIcon = document.getElementById('mute-icon');
+    const unmutedIcon = document.getElementById('unmute-icon');
+
+    mutedIcon.style.display = 'inline';
+    unmutedIcon.style.display = 'none';
 
     function isIOS() {
         const ua = navigator.userAgent;
@@ -407,7 +439,7 @@ const themeTransitionEvents = {
             video.style.aspectRatio = "2/3";
             video.style.maxHeight = "85vh";
             if (window.matchMedia("(max-width: 480px)").matches) {
-                video.style.width = "95vw";
+                video.style.width = "93vw";
             } else {
                 video.style.width = "90vw";
             }
@@ -450,10 +482,13 @@ const themeTransitionEvents = {
             if (!isIOS()) {
                 fadeInVolume(video);
             }
-            muteToggle.textContent = '🔊';
+            mutedIcon.style.display = 'none';
+            unmutedIcon.style.display = 'inline';
+
         } else {
             video.muted = true;
-            muteToggle.textContent = '🔇';
+            mutedIcon.style.display = 'inline';
+            unmutedIcon.style.display = 'none';
         }
     });
 
