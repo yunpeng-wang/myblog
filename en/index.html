@@ -230,7 +230,18 @@ const themeTransitionEvents = {
 
 <body class="list dark" id="top">
     
-        <div id="intro-overlay">
+        <noscript>
+    <style>
+        #intro-overlay {
+            display: none !important;
+        }
+    </style>
+    <div style="padding:1em; color: gray; text-align:center;">
+        JavaScript is disabled. JavaScript已被禁用。
+    </div>
+</noscript>
+
+<div id="intro-overlay">
     <video id="introVideo" autoplay muted playsinline preload="auto"
         poster='/media/poster-horizontal.webp'>
         Welcome to my world of wildlife. Your browser does not support the video tag.
