@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <title>Fonts</title>
+        <noscript>
+        <div style="padding:1em; color: gray; text-align:center;">
+            JavaScript is disabled. JavaScript已被禁用。
+        </div>
+        </noscript>
+        <style>
+            body {
+            font-family: 'Segoe UI', sans-serif;
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 1em;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
+            }
+            h1 {
+            font-size: 2em;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 0.3em;
+            margin-top: 1.5em;
+            }
+            h2 {
+            font-size: 1.4em;
+            margin-top: 1.2em;
+            border-left: 4px solid #0077cc;
+            padding-left: 0.5em;
+            background: #eef6fc;
+            }
+            h3 {
+            font-size: 1.2em;
+            color: #444;
+            margin-top: 1em;
+            }
+            ul, ol {
+            padding-left: 1.5em;
+            }
+            a {
+            color: #0077cc;
+            text-decoration: none;
+            }
+            a:hover {
+            text-decoration: underline;
+            }
+        </style>
+        </head>
+        <body>
+        <h1 id="js-plugin-usage-record">JS Plugin Usage Record</h1>
+<h2 id="glightbox">GLightbox</h2>
+<p><strong>Version Used:</strong> 3.3.0<br />
+<strong>Source URL:</strong> <a href="https://github.com/biati-digital/glightbox">https://github.com/biati-digital/glightbox</a><br />
+<strong>License Type:</strong> MIT License<br />
+<strong>Date Downloaded:</strong> 2025-06-22<br />
+<strong>Intended Use:</strong> Used for lightbox functionality on gallery images on my personal photography website.<br />
+<strong>License File:</strong> "licenses/js/glightbox-3.3.0/LICENSE.md"</p>
+<hr />
+<h1 id="legal-position">Legal Position</h1>
+<p>License terms were verified on the download date. No attribution or commercial restriction was indicated at that time.</p>
+<p>If the license of the asset changes in the future, this use remains valid under the original license.</p>
+<hr />
+<p><em>This file is maintained for transparency and documentation purposes, in accordance with best practices for using third-party resources.</em></p>
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        let counter = 1;
+        document.querySelectorAll("h2").forEach(h2 => {
+            h2.innerHTML = `${counter}. ${h2.innerHTML}`;
+            counter++;
+        });
+        });
+        </script>
+        </body>
+        </html>
