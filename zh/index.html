@@ -248,11 +248,11 @@ const themeTransitionEvents = {
     </video>
     <div id="button-layout">
         <button id="enter-button" type="button" onclick="skipIntro()">
-            <img id="skip-icon" src='/media/skip.webp' alt="skip Icon">
+            <img id="skip-icon" src='/media/skip.png' alt="skip Icon">
             跳过 / Skip</button>
         <button id="mute-toggle" type="button">
-            <img id="mute-icon" src='/media/mute.webp' alt="mute Icon">
-            <img id="unmute-icon" src='/media/unmute.webp' alt="unmute Icon">
+            <img id="mute-icon" src='/media/mute.png' alt="mute Icon">
+            <img id="unmute-icon" src='/media/unmute.png' alt="unmute Icon">
         </button>
     </div>
     <div id="domain-name">BeholdWild.org</div>
@@ -330,8 +330,8 @@ const themeTransitionEvents = {
     }
 
     #enter-button img {
-        width: 1.5em;
-        height: 1.5em;
+        width: 1.2em;
+        height: 1.2em;
         margin-right: 0.5em;
         vertical-align: baseline;
         opacity: 0.7;
@@ -716,9 +716,55 @@ const themeTransitionEvents = {
                     关于
                 </span>
             </a>
-        </div>
-        <div id="clock"></div>
-        <script src="/js/home-clock.js" defer></script>
+        </div><div class="home-widget">
+  <div id="clock"></div>
+  <img id="weather-icon" alt="Weather Icon" />
+</div>
+
+<style>
+  body {
+    #weather-icon {
+      filter: brightness(0.8) contrast(120%);
+    }
+  }
+
+  body.dark {
+    #weather-icon {
+      filter: brightness(1.2) contrast(120%);     
+    }
+  }
+
+  .home-widget {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  #weather-icon {
+    width: 1.8rem;
+    display: block;
+    animation: breathe 3.5s ease-in-out infinite;
+    transform-origin: center center;
+    will-change: transform;
+    padding: 0.1rem;
+    box-sizing: content-box;
+    border-radius: 0 !important;
+  }
+
+  @keyframes breathe {
+    0%,
+    100% {
+      transform: scale(0.95);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+</style>
+
+<script src="/js/home-clock.js" defer></script>
+<script src="/js/home-weather.js" defer></script>
     </div>
 </div>
     </main>

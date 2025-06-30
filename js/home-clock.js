@@ -1,4 +1,4 @@
-// for clock in index_profile.html
+// for clock in home-widget.html
 function updateClock() {
     const now = new Date();
     const options = {
