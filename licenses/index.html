@@ -10,11 +10,50 @@
         font-family: "Segoe UI", sans-serif;
         max-width: 640px;
         height: 90vh;
-        margin: 4em auto;
+        margin: 2em auto;
         padding: 1em 1.5em;
         line-height: 1.6;
         color: #333;
         background-color: #fafafa;
+      }
+
+      .page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 1em;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 0.3em;
+      }
+
+      .page-header h1 {
+        font-size: 1.8em;
+        margin: 0;
+        border-bottom: none; /* 如果你有底线可以移到 .page-header */
+      }
+
+      .back-home {
+        padding: 0.4em 1em;
+        font-size: 0.9em;
+        background-color: transparent;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        color: #333;
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .back-home img {
+        width: 2.5rem;
+        align-self: center;
+        opacity: 0.9;
+      }
+
+      .back-home:hover {
+        background-color: #ddd;
       }
 
       h1 {
@@ -58,11 +97,23 @@
     </style>
   </head>
   <body>
-    <h1>Credits & Licenses</h1>
+    <div class="page-header">
+      <h1>Credits & Licenses</h1>
+      <button onclick="location.href='/'" class="back-home">
+        <img src="/images/icons/backhome.png" alt="backhome Icon" />
+        Home
+      </button>
+    </div>
     <ul>
-      <li><a href="/licenses/font-license.html" target="credit-iframe">Fonts</a></li>
-      <li><a href="/licenses/icon-license.html" target="credit-iframe">Icons</a></li>
-      <li><a href="/licenses/js-license.html" target="credit-iframe">JavaScript Libraries</a></li>
+      <li>
+        <a href="/licenses/font-license.html" target="credit-iframe">Fonts</a>
+      </li>
+      <li>
+        <a href="/licenses/icon-license.html" target="credit-iframe">Icons</a>
+      </li>
+      <li>
+        <a href="/licenses/js-license.html" target="credit-iframe">JavaScript Libraries</a>
+      </li>
     </ul>
     <p>
       All listed resources are under public domain or open licenses. See each
