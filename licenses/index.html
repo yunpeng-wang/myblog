@@ -2,13 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, follow" />
     <title>Credits & Licenses</title>
     <style>
       body {
         font-family: "Segoe UI", sans-serif;
         max-width: 640px;
+        height: 90vh;
         margin: 4em auto;
         padding: 1em 1.5em;
         line-height: 1.6;
@@ -47,6 +48,13 @@
         font-size: 0.95em;
         color: #666;
       }
+
+      iframe[name="credit-iframe"] {
+        width: 100%;
+        height: 50%; /* 或者 auto + JS 动态高度调整（进阶） */
+        border: 1px solid #ddd;
+        margin-top: 1em;
+      }
     </style>
   </head>
   <body>
@@ -60,5 +68,8 @@
       All listed resources are under public domain or open licenses. See each
       file for details.
     </p>
+    <iframe name="credit-iframe" title="Credits content frame">
+      Your browser does not support iframes.
+    </iframe>
   </body>
 </html>
