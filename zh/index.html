@@ -42,42 +42,9 @@
 
 
 
-<link rel="stylesheet" href="/css/custom_home.min.3b831e4c945eecd59e6f22c75442b0793e0db6341c2212c1df80b80f00e4a759.css"><div class="bg-bird-layer">
+<link rel="stylesheet" href="/css/custom_home.min.d40ec4d2e16800907e011a46c1076df656c77049682138d956793c28f492d0d4.css"><div class="bg-bird-layer">
     
-</div>
-
-<style>
-    .bg-bird-layer {
-        position: fixed;
-        top: var(--real-header-height);
-        left: var(--gap);
-        width: calc(100vw - var(--gap) * 2);
-        height: calc(100vh - var(--real-header-height) - var(--real-footer-height));
-        z-index: -1;
-        pointer-events: none;
-         
-        padding: var(--gap);
-    }
-
-    .bg-bird-layer img {
-        position: absolute;
-        width: 60px;
-        height: auto;
-        transform: scale(0.8);
-    }
-
-    @keyframes imgFade {
-        from {
-            opacity: 0;
-            transform: scale(0.8);
-        }
-
-        to {
-            opacity: 1;
-            transform: scale(1);
-        }
-    }
-</style><script src="/js/mainbg.js" defer></script>
+</div><script src="/js/mainbg.js" defer></script>
 
 
 
@@ -624,6 +591,23 @@
     align-items: center;
     padding-top: 0.2rem;
     gap: 0.8rem;
+  }
+
+  #clock {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    opacity: 0.6;
+    transition: opacity 0.3s ease !important;
+  }
+
+   
+  html[lang="zh"] #clock {
+    font-family: "Noto Sans SC", "PingFang SC", sans-serif;
+    letter-spacing: 0.1em
+  }
+
+  html[lang="en"] #clock {
+    font-family: monospace,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
   #weather-icon {
