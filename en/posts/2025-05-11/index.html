@@ -10,7 +10,7 @@
 <meta name="description" content="Mud, Wings, and a Worm War">
 <meta name="author" content="Yunpeng Wang">
 <link rel="canonical" href="https://www.beholdwild.org/en/posts/2025-05-11/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.b12eb82b69c781152f76faa37150e5b5ec52de101978c233d16f93f92a695138.css" integrity="sha256-sS64K2nHgRUvdvqjcVDltexS3hAZeMIz0W&#43;T&#43;SppUTg=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://www.beholdwild.org/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.beholdwild.org/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://www.beholdwild.org/favicon-32x32.png">
@@ -29,133 +29,16 @@
 
     </style>
 </noscript>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  
-  const performanceStyle = document.createElement('style');
-  performanceStyle.textContent = `
-    .theme-transitioning * {
-      will-change: background-color, color, border-color;
-    }
-    
-    /* 为固定位置元素添加单独优化 */
-    header, footer, .fixed-element {
-      will-change: background-color, box-shadow;
-    }
-  `;
-  document.head.appendChild(performanceStyle);
-  
-  
-  const originalThemeToggle = window.toggleTheme;
-  
-  
-  window.toggleTheme = function() {
-    
-    document.documentElement.classList.add('theme-transitioning');
-    
-    
-    setTimeout(() => {
-      
-      originalThemeToggle();
-      
-      
-      setTimeout(() => {
-        document.documentElement.classList.remove('theme-transitioning');
-      }, parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--theme-transition-duration')) * 1000);
-    }, 10);
-  };
-  
-  
-  const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-  darkModeMediaQuery.addEventListener('change', e => {
-    document.documentElement.classList.add('theme-transitioning');
-    setTimeout(() => {
-      const theme = e.matches ? 'dark' : 'light';
-      document.body.classList.toggle('dark', theme === 'dark');
-      localStorage.setItem('pref-theme', theme);
-      
-      setTimeout(() => {
-        document.documentElement.classList.remove('theme-transitioning');
-      }, parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--theme-transition-duration')) * 1000);
-    }, 10);
-  });
-  
-  
-  const spinner = document.createElement('div');
-  spinner.id = 'theme-transition-spinner';
-  spinner.style = `
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    border: 3px solid var(--primary);
-    border-top-color: transparent;
-    opacity: 0;
-    pointer-events: none;
-    z-index: 10000;
-    transition: opacity 0.3s ease;
-  `;
-  document.body.appendChild(spinner);
-  
-  
-  document.documentElement.addEventListener('theme-transition-start', () => {
-    spinner.style.opacity = '1';
-    spinner.style.animation = 'theme-spinner 1s linear infinite';
-  });
-  
-  document.documentElement.addEventListener('theme-transition-end', () => {
-    spinner.style.opacity = '0';
-    spinner.style.animation = 'none';
-  });
-  
-  
-  const spinnerStyle = document.createElement('style');
-  spinnerStyle.textContent = `
-    @keyframes theme-spinner {
-      to { transform: rotate(360deg); }
-    }
-  `;
-  document.head.appendChild(spinnerStyle);
-});
 
 
-const themeTransitionEvents = {
-  start: new Event('theme-transition-start'),
-  end: new Event('theme-transition-end')
-};
 
-
-(function() {
-  const originalToggle = window.toggleTheme;
-  
-  window.toggleTheme = function() {
-    document.documentElement.dispatchEvent(themeTransitionEvents.start);
-    originalToggle();
-    
-    setTimeout(() => {
-      document.documentElement.dispatchEvent(themeTransitionEvents.end);
-    }, parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--theme-transition-duration')) * 1000);
-  };
-})();
-</script>
-
-<style>
-   
-  .theme-transitioning {
-    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track) !important;
-    transition: scrollbar-color var(--theme-transition-duration) var(--theme-transition-easing);
-  }
-  
-   
-  img {
-    transition: opacity var(--theme-transition-duration) var(--theme-transition-easing) !important;
-  }
-</style>
 
 
 <link rel="stylesheet" href="/css/custom_global.min.90ec1b92790cd80b1adbf75850bc2549a9776a2ce951bf91de66577cef92fb1f.css">
+<link rel="stylesheet" href="/css/theme-transitions.min.b0370b1a9a6cb45fb21b8b115ee4e400db6920d3a1efd4f22225a94a8caa38ff.css">
+<script src="/js/theme-transitions.js" defer></script>
+
+
 
 
   
