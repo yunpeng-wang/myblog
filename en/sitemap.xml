@@ -33,7 +33,7 @@
                 />
   </url><url>
     <loc>https://www.beholdwild.org/en/posts/</loc>
-    <lastmod>2025-05-11T00:00:00+00:00</lastmod>
+    <lastmod>2025-06-14T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
@@ -48,7 +48,7 @@
                 />
   </url><url>
     <loc>https://www.beholdwild.org/en/gallery/</loc>
-    <lastmod>2025-05-11T00:00:00+00:00</lastmod>
+    <lastmod>2025-06-14T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
@@ -62,8 +62,23 @@
                 href="https://www.beholdwild.org/en/gallery/"
                 />
   </url><url>
+    <loc>https://www.beholdwild.org/en/posts/2025-06-14/</loc>
+    <lastmod>2025-06-14T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://www.beholdwild.org/zh/posts/2025-06-14/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.beholdwild.org/en/posts/2025-06-14/"
+                />
+  </url><url>
     <loc>https://www.beholdwild.org/en/tags/</loc>
-    <lastmod>2025-05-11T00:00:00+00:00</lastmod>
+    <lastmod>2025-06-14T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link
@@ -76,6 +91,11 @@
                 hreflang="en"
                 href="https://www.beholdwild.org/en/tags/"
                 />
+  </url><url>
+    <loc>https://www.beholdwild.org/en/tags/wildlife/</loc>
+    <lastmod>2025-06-14T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url><url>
     <loc>https://www.beholdwild.org/en/posts/2025-05-11/</loc>
     <lastmod>2025-05-11T00:00:00+00:00</lastmod>
@@ -91,11 +111,6 @@
                 hreflang="en"
                 href="https://www.beholdwild.org/en/posts/2025-05-11/"
                 />
-  </url><url>
-    <loc>https://www.beholdwild.org/en/tags/wildlife/</loc>
-    <lastmod>2025-05-11T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url><url>
     <loc>https://www.beholdwild.org/en/posts/2025-04-30/</loc>
     <lastmod>2025-04-30T00:00:00+00:00</lastmod>
