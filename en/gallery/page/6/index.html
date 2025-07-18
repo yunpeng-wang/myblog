@@ -29,6 +29,34 @@
         }
 
     </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
 </noscript>
 
 
@@ -47,7 +75,7 @@
   
   
    
-  <link rel="stylesheet" href="/css/custom_pagination.min.86046ab4b8555ba7372e8c69f9597b6cea7f05d82bba1ef8162666151ec19447.css">
+  <link rel="stylesheet" href="/css/custom_pagination.min.55a5ac2067d7b3af7678d260f47557fded6c67951b47cf8de53cf87644a8a596.css">
   <link rel="stylesheet" href="/vendor/glightbox/glightbox.min.6d3f62d4d17969f9c70e9438cf671004725019e868123f2ebc295a006f8d5d2d.css">
   <link rel="stylesheet" href="/css/custom_gallery.min.d0d1242b9814b2bc50a95930eabb0f4a292580ce98ae21919541b412096ac785.css">
 
@@ -81,11 +109,15 @@
 </script>
 </head>
 
-<body class="list dark" id="top">
+<body class="list" id="top">
     
 <script>
-    if (localStorage.getItem("pref-theme") === "light") {
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
     }
 
 </script>
