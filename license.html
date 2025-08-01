@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+        <title>Fonts</title>
+        <noscript>
+        <div style="padding:1em; color: gray; text-align:center;">
+            JavaScript is disabled. JavaScript已被禁用。
+        </div>
+        </noscript>
+        <style>
+            body {
+            font-family: 'Segoe UI', sans-serif;
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 1em;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
+            }
+            h1 {
+            font-size: 2em;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 0.3em;
+            margin-top: 1.5em;
+            }
+            h2 {
+            font-size: 1.4em;
+            margin-top: 1.2em;
+            border-left: 4px solid #0077cc;
+            padding-left: 0.5em;
+            background: #eef6fc;
+            }
+            h3 {
+            font-size: 1.2em;
+            color: #444;
+            margin-top: 1em;
+            }
+            ul, ol {
+            padding-left: 1.5em;
+            }
+            a {
+            color: #0077cc;
+            text-decoration: none;
+            }
+            a:hover {
+            text-decoration: underline;
+            }
+        </style>
+        </head>
+        <body>
+        <h1 id="copyright-notice">Copyright Notice</h1>
+<p>All content on this site — including but not limited to photographs, videos, and written materials — is the original work of <strong>Wang Yunpeng</strong>.</p>
+<p>Unless explicitly stated otherwise, all works are <strong>© Wang Yunpeng</strong>. Any reuse, reproduction, or redistribution without prior written consent is strictly prohibited.</p>
+<p>Unauthorized use may constitute a violation of applicable copyright laws.</p>
+<p>For permissions or inquiries, please visit: <a href="https://www.beholdwild.org/en/contact/">https://www.beholdwild.org/en/contact/</a></p>
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        let counter = 1;
+        document.querySelectorAll("h2").forEach(h2 => {
+            h2.innerHTML = `${counter}. ${h2.innerHTML}`;
+            counter++;
+        });
+        });
+        </script>
+        </body>
+        </html>

@@ -1,9 +1,0 @@
-This website is generated using Hugo and PaperMod.
-
-All media content on this site — including but not limited to photographs, videos, and texts — is original work by the author, Wang Yunpeng.
-
-Unless otherwise specified, these works are © Wang Yunpeng and may not be reused, copied, or redistributed without explicit written permission.
-
-Unauthorized use of content may constitute a violation of copyright law.
-
-For inquiries or permission requests, please contact: https://www.beholdwild.org/en/contact/
