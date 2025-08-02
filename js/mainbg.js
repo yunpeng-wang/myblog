@@ -84,6 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const config = isDark ? b.dark : b.light;
                 const img = document.createElement("img");
                 img.src = config.src;
+                img.alt = "home background animals image";
                 img.style.position = "absolute";
                 img.style.top = `${rect.top + rect.height * config.y}px`;
                 img.style.left = `${rect.left + rect.width * config.x}px`;

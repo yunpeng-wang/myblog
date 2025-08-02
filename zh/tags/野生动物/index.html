@@ -64,7 +64,7 @@
 
 
 
-<link rel="stylesheet" href="/css/custom_global.min.d79303db4ba79677ca8be5548c111d72369df9d0e2bd299808f05edf11470a6f.css">
+<link rel="stylesheet" href="/css/custom_global.min.c9344751dd588781ca9b8fb678429ed5c36d2091dbf362d2b26fa559d82c9086.css">
 <link rel="stylesheet" href="/css/theme-transitions.min.da001c1a1c70f4ddf2d04371fafc3da48b1fe64413198a3e12c13a60593e0d49.css">
 <script src="/js/theme-transitions.js" defer></script>
 
@@ -109,17 +109,8 @@
         <div class="logo" style="display:flex; align-items:center;">
             
             
-            <img
-                src="/images/title_icon_light.269107401303a30a8880428d0d346283f28c56351270377b7e186360721df4ea.webp"
-                class="title-icon light-mode"
-                alt="title bird"
-                style="height:24px; margin-right:0.5em;">
-            <img
-                src="/images/title_icon_dark.d9fc876f13ef7be02fdabb46f8a6b57e8e1096fab46cb9f24121f2dd63431d3d.webp"
-                class="title-icon dark-mode"
-                alt="title bird"
-                style="height:24px; margin-right:0.5em;">
-            <a href="https://www.beholdwild.org/zh/" accesskey="h" title="Behold the Wild (Alt + H)">Behold the Wild</a>
+            <a href="https://www.beholdwild.org/zh/" accesskey="h" title="Behold the Wild (Alt + H)">
+                <img src="/images/title_icon_light.269107401303a30a8880428d0d346283f28c56351270377b7e186360721df4ea.webp" class="title-icon light-mode" alt="title bird"><img src="/images/title_icon_dark.d9fc876f13ef7be02fdabb46f8a6b57e8e1096fab46cb9f24121f2dd63431d3d.webp" class="title-icon dark-mode" alt="title bird">Behold the Wild</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -145,9 +136,8 @@
                     <li>
                         <a href="https://www.beholdwild.org/en/" title="🇺🇸 English"
                             aria-label="🇺🇸 English">🇺🇸 English</a>
-                    </li>
+                    </li><li>|</li>
                 </ul>
-                <ul>|</ul>
                 <style>
   :root {
     --zen-duration: 0.9s;
@@ -156,11 +146,11 @@
   }
 
   body:not(.dark) {
-    --button-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+    --button-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   }
 
   body.dark {
-    --button-shadow: 0 0 3px rgba(255, 255, 255, 0.4);
+    --button-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
   }
 
   #zen-toggle {
@@ -174,8 +164,8 @@
   }
 
   #zen-icon {
-    width: 22px;
-    height: 22px;
+    width: 1.3rem;
+    height: 1.3rem;
     display: inline-block;
     filter: drop-shadow(var(--button-shadow));
   }
@@ -201,7 +191,7 @@
 </style>
 
 
-<button id="zen-toggle" onclick="toggleZenMode()" title="Zen Mode">
+<button id="zen-toggle" onclick="toggleZenMode()" title="Zen Mode" type="button">
   <span id="zen-icon" class="zen-icon">
     <img src="/images/taiji.106799c70694dd2a8b259a9ee90ed43b9cef523dd85253c43ec09261edd2d8b6.svg" alt="Zen Mode Icon" />
   </span>
