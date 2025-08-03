@@ -47,45 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }, parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--theme-transition-duration')) * 1000);
     }, 10);
   });
-  
-  // 5. 添加过渡状态指示器（可选）
-  const spinner = document.createElement('div');
-  spinner.id = 'theme-transition-spinner';
-  spinner.style = `
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    border: 3px solid var(--primary);
-    border-top-color: transparent;
-    opacity: 0;
-    pointer-events: none;
-    z-index: 10000;
-    transition: opacity 0.3s ease;
-  `;
-  document.body.appendChild(spinner);
-  
-  // 监听过渡开始/结束
-  document.documentElement.addEventListener('theme-transition-start', () => {
-    spinner.style.opacity = '1';
-    spinner.style.animation = 'theme-spinner 1s linear infinite';
-  });
-  
-  document.documentElement.addEventListener('theme-transition-end', () => {
-    spinner.style.opacity = '0';
-    spinner.style.animation = 'none';
-  });
-  
-  // 添加动画关键帧
-  const spinnerStyle = document.createElement('style');
-  spinnerStyle.textContent = `
-    @keyframes theme-spinner {
-      to { transform: rotate(360deg); }
-    }
-  `;
-  document.head.appendChild(spinnerStyle);
 });
 
 // 创建自定义事件触发机制
