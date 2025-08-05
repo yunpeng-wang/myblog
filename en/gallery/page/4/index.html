@@ -44,29 +44,49 @@
 
 <link rel="stylesheet" href="/css/custom_global.min.dcd89251b5b2a3cbef9e4ee48c330e278f2d615164926c5bd9ed2f350c4e1ea9.css">
 <link rel="stylesheet" href="/css/theme-transitions.min.abae04f924cfdf0735d3ff3973e66835828bcba69a2c7cd0781ede06ffdc1877.css">
-<script src="/js/theme-transitions.js" defer></script><canvas id="canvas-universe"></canvas>
+<script type="module" src="/js/theme-transitions.js"></script><canvas id="canvas-dark"></canvas>
+<canvas id="canvas-light"></canvas>
 
 <style>
-  body.dark #canvas-universe {
-    background: radial-gradient(1600px at 50% 120%, #212750 10%, #020409 100%);
+  #canvas-dark,
+  #canvas-light {
+    position: absolute;
     width: 100%;
     height: 100%;
-    display: block;
-    position: absolute;
+    left: 0;
+    top: 0;
     margin: 0;
     padding: 0;
     border: 0;
     outline: 0;
-    left: 0;
-    top: 0;
     pointer-events: none;
+    z-index: -2;
+    opacity: 0;
+    transition: opacity 0.8s ease;  
   }
 
-  body #canvas-universe{
-    display: none;
+  body.dark #canvas-dark {
+    opacity: 1;
+    background: radial-gradient(1600px at 50% 120%, #212750 10%, #070e21 100%);
+  }
+
+  body #canvas-dark {
+    opacity: 0;
+  }
+
+  body #canvas-light {
+    opacity: 1;
+    background: radial-gradient(1600px at 50% 120%, #fff8e6 10%, #efefef 100%);
+  }
+
+  body.dark #canvas-light {
+    opacity: 0;
   }
 </style>
 <script type="module" src="/js/universe.js"></script>
+
+
+<script type="module" src="/js/zen-button.js"></script>
 
 
 
@@ -154,8 +174,7 @@
                         <a href="https://www.beholdwild.org/zh/" title="🇨🇳 中文"
                             aria-label="🇨🇳 中文">🇨🇳 中文</a>
                     </li><li>|</li>
-                </ul>
-                <style>
+                </ul><style>
   :root {
     --zen-duration: 0.9s;
     --zen-spin-v1: 10s;
@@ -208,15 +227,13 @@
 </style>
 
 
-<button id="zen-toggle" onclick="toggleZenMode()" title="Zen Mode" type="button">
+<button id="zen-toggle" title="Zen Mode" type="button">
   <span id="zen-icon" class="zen-icon">
     <img src="/images/taiji.106799c70694dd2a8b259a9ee90ed43b9cef523dd85253c43ec09261edd2d8b6.svg" alt="Zen Mode Icon" />
   </span>
 </button>
 
-<audio id="zen-audio" src='/audios/zen.mp3' preload="auto"></audio>
-                <script src="/js/zen-button.js" defer></script>
-            </div>
+<audio id="zen-audio" src='/audios/zen.mp3' preload="auto"></audio></div>
         </div>
         <ul id="menu">
             <li>
@@ -460,8 +477,8 @@
 
 
 
-<script src="/vendor/glightbox/glightbox.min.c67c59cdf980793b0216c9de9c6ebf688418838822af1e50b09439e3aa289ff3.js" defer></script>
-<script src="/js/glightbox-fix.js" defer></script> 
+<script type="module" src="/vendor/glightbox/glightbox.min.c67c59cdf980793b0216c9de9c6ebf688418838822af1e50b09439e3aa289ff3.js"></script>
+<script type="module" src="/js/glightbox-fix.js"></script> 
 
 
 <script>

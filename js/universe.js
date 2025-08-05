@@ -6,7 +6,7 @@ let winHeight;
 let starsNum;
 let ctx;
 let randLow = 0.05;
-let cvs = document.getElementById("canvas-universe");
+let cvs = document.getElementById("canvas-dark");
 let showComet = false;
 let colorGiant = "180,184,240";
 let colorComet = "226,225,224";
