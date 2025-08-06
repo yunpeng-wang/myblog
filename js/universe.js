@@ -7,6 +7,7 @@ let starsNum;
 let ctx;
 let randLow = 0.05;
 let cvs = document.getElementById("canvas-dark");
+cvs.style.background = "radial-gradient(1600px at 50% 120%, #212750 10%, #070e21 100%)";
 let showComet = false;
 let colorGiant = "180,184,240";
 let colorComet = "226,225,224";
