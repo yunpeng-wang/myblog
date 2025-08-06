@@ -10,6 +10,7 @@ let imgList;
 let ctx;
 let running = false;
 let loaded = false;
+let oneDeg = Math.PI / 180;
 
 class Sakura {
   constructor(img) {
@@ -19,6 +20,7 @@ class Sakura {
     this.w = 0;
     this.dx = 0;
     this.dy = 0;
+    this.dw = 0;
     this.size = 0;
     this.opacity = 0;
     this.opacityRate = 0;
@@ -55,8 +57,9 @@ class Sakura {
 
     this.dx = Sakura.randInterval_float(-0.8, 0.8);
     this.dy = Sakura.randInterval_float(0.4, 1.0);
+    this.dw = Sakura.randInterval_float(-oneDeg, oneDeg)*0.5;
 
-    this.size = Sakura.randInterval_float(10, 40);
+    this.size = Sakura.randInterval_float(5, 20);
     this.opacity = 0.1;
     this.opacityRate = Sakura.randInterval_float(0.002, 0.004);
     this.opacityThre = Sakura.randInterval_float(0.4, 0.9);
@@ -68,13 +71,20 @@ class Sakura {
     ctx.translate(this.x, this.y);
     ctx.rotate(this.w);
     ctx.globalAlpha = this.opacity;
-    ctx.drawImage(this.img, 0, 0, -this.size / 2, -this.size / 2);
+    ctx.drawImage(
+      this.img,
+      -this.size / 2,
+      -this.size / 2,
+      this.size,
+      this.size
+    );
     ctx.restore();
   }
 
   update() {
     this.x += this.dx;
     this.y += this.dy;
+    this.w += this.dw;
     if (this.x > winWidth || this.x < 0 || this.y > winHeight || this.y < 0) {
       this.initial();
     }
@@ -139,9 +149,9 @@ function updateAnimationState() {
   const islight = !document.body.classList.contains("dark");
   if (islight && !running) {
     running = true;
-    if (loaded){
+    if (loaded) {
       animeLoop();
-    };
+    }
   } else if (!islight && running) {
     running = false;
   }
@@ -160,7 +170,7 @@ observer.observe(document.body, {
 });
 
 srcImage.onload = () => {
-    loaded = true;
-    updateAnimationState();
+  loaded = true;
+  updateAnimationState();
 };
 // #end Main code
