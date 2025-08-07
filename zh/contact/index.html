@@ -117,10 +117,25 @@
 
 
 
-   
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="icon-user" viewBox="0 0 448 512">
+        <path d="M224 248a120 120 0 1 0 0-240 120 120 0 1 0 0 240zm-29.7 56C95.8 304 16 383.8 16 482.3 16 498.7 29.3 512 45.7 512l356.6 0c16.4 0 29.7-13.3 29.7-29.7 0-98.5-79.8-178.3-178.3-178.3l-59.4 0z"/>
+    </symbol>
+    <symbol id="icon-mail" viewBox="0 0 512 512">
+        <path d="M48 64c-26.5 0-48 21.5-48 48 0 15.1 7.1 29.3 19.2 38.4l208 156c17.1 12.8 40.5 12.8 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48L48 64zM0 196L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-188-198.4 148.8c-34.1 25.6-81.1 25.6-115.2 0L0 196z"/>
+    </symbol>
+    <symbol id="icon-tag" viewBox="0 0 512 512">
+        <path d="M32.5 96l0 149.5c0 17 6.7 33.3 18.7 45.3l192 192c25 25 65.5 25 90.5 0L483.2 333.3c25-25 25-65.5 0-90.5l-192-192C279.2 38.7 263 32 246 32L96.5 32c-35.3 0-64 28.7-64 64zm112 16a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+    </symbol>
+    <symbol id="icon-chat" viewBox="0 0 512 512">
+        <path d="M512 240c0 132.5-114.6 240-256 240-37.1 0-72.3-7.4-104.1-20.7L33.5 510.1c-9.4 4-20.2 1.7-27.1-5.8S-2 485.8 2.8 476.8l48.8-92.2C19.2 344.3 0 294.3 0 240 0 107.5 114.6 0 256 0S512 107.5 512 240z"/>
+    </symbol>
+    <symbol id="icon-send" viewBox="0 0 576 512">
+        <path d="M536.4-26.3c9.8-3.5 20.6-1 28 6.3s9.8 18.2 6.3 28l-178 496.9c-5 13.9-18.1 23.1-32.8 23.1-14.2 0-27-8.6-32.3-21.7l-64.2-158c-4.5-11-2.5-23.6 5.2-32.6l94.5-112.4c5.1-6.1 4.7-15-.9-20.6s-14.6-6-20.6-.9L229.2 276.1c-9.1 7.6-21.6 9.6-32.6 5.2L38.1 216.8c-13.1-5.3-21.7-18.1-21.7-32.3 0-14.7 9.2-27.8 23.1-32.8l496.9-178z"/>
+    </symbol>
+</svg>
   
-  <link rel="stylesheet" href="/css/all.min.74005d7c17d4a02f2f25404ec0655d9bc2fdaa53166874c87d7b7eec69d9088a.css">
-  <link rel="stylesheet" href="/css/custom_contact.min.25081f3ea5c420b7b648459e2ee6f417031004f16bcd6c63e18abfce1a3abcd2.css">
+  <link rel="stylesheet" href="/css/custom_contact.min.81a988bb7cd33e34d10186e9273bb7c8cd4afe091c145bb401f58f294b73a668.css">
 
 
 <meta property="og:url" content="https://www.beholdwild.org/zh/contact/">
@@ -307,7 +322,9 @@
           <form class="c-contact-form" action="https://formspree.io/f/xdkzaqbq" method="POST">
             <div class="c-form-group">
               <label for="name" class="c-form-label">
-                <i class="fas fa-user"></i>
+                <svg class="contact-icon">
+                  <use href="#icon-user" />
+                </svg>
                 你的名字
               </label>
               <input type="text" id="name" name="name" class="c-form-input" 
@@ -316,7 +333,9 @@
             
             <div class="c-form-group">
               <label for="email" class="c-form-label">
-                <i class="fas fa-envelope"></i>
+                <svg class="contact-icon">
+                  <use href="#icon-mail" />
+                </svg>
                 你的邮箱
               </label>
               <input type="email" id="email" name="_replyto" class="c-form-input" 
@@ -325,7 +344,9 @@
             
             <div class="c-form-group">
               <label for="subject" class="c-form-label">
-                <i class="fas fa-tag"></i>
+                <svg class="contact-icon">
+                  <use href="#icon-tag" />
+                </svg>
                 主题
               </label>
               <input type="text" id="subject" name="subject" class="c-form-input" 
@@ -334,7 +355,9 @@
             
             <div class="c-form-group">
               <label for="message" class="c-form-label">
-                <i class="fas fa-comment"></i>
+                <svg class="contact-icon">
+                  <use href="#icon-chat" />
+                </svg>
                 留言内容
               </label>
               <textarea id="message" name="message" class="c-form-textarea" 
@@ -342,7 +365,9 @@
             </div>
             <div class="c-buttom-box">
             <button type="submit" class="c-form-button">
-              <i class="fas fa-paper-plane"></i>
+                <svg class="contact-icon contact-icon-send">
+                  <use href="#icon-send" />
+                </svg>
               发送留言
             </button>
             </div>

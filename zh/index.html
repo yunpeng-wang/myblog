@@ -110,11 +110,31 @@
 <script type="module" src="/js/zen-button.js"></script>
 
 
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="icon-musicoff" viewBox="0 -0.91 122.88 122.88">
+        <path d="M7.6,22.7c-2.91-2.12-3.56-6.2-1.44-9.12s6.2-3.56,9.11-1.44L120.2,88.64c2.91,2.12,3.55,6.2,1.43,9.12 c-2.12,2.91-6.2,3.56-9.11,1.44L7.6,22.7L7.6,22.7z M88.85,51.97V23.09l-28.42,8.16l-24.01-17.5L96.79,0v57.76L88.85,51.97 L88.85,51.97z M36.33,57.46v45.08c0.03,0.32,0.05,0.64,0.05,0.96v0.01c0,7.76-8.14,15.46-18.19,17.2C8.15,122.44,0,117.55,0,109.79 c0-7.76,8.15-15.46,18.19-17.19c3.78-0.65,7.29-0.36,10.21,0.66V51.68L36.33,57.46L36.33,57.46z M92.87,98.69 c-2.77,2.77-6.71,4.88-11.09,5.63c-8.39,1.45-15.19-2.63-15.19-9.12c-0.01-4.03,2.62-8.04,6.62-10.84L92.87,98.69L92.87,98.69z"/>
+    </symbol>
+    <symbol id="icon-musicon" viewBox="0 0 1024 1024">
+        <path d="M703.90625 865.90625l-39.9375-15.65625 148.6875-380.0625c6.84375-17.53125-2.4375-37.3125-20.34375-43.125l-260.0625-84.9375c-16.6875-5.4375-34.6875 3.1875-40.875 19.59375L361.8125 704.46875l-61.40625-23.15625 181.875-481.125c6.09375-16.21875 23.8125-24.84375 40.40625-19.78125l389.0625 120.1875c18.1875 5.625 27.84375 25.5 20.90625 43.3125l-199.125 509.0625c-4.6875 11.71875-17.90625 17.53125-29.625 12.9375z"/>
 
-<link rel="stylesheet" href="/css/custom_home.min.27c85cacc6ddafc8e382aa1b04f29305d31b749f1f49d35e65e751b0dbe2cafd.css"><div class="bg-bird-layer">
+        <path d="M241.0625 658.15625m-129.375 0a129.375 129.375 0 1 0 258.75 0 129.375 129.375 0 1 0-258.75 0Z"/>
+
+        <path d="M614.375 802.90625m-129.375 0a129.375 129.375 0 1 0 258.75 0 129.375 129.375 0 1 0-258.75 0Z"/>
+
+        <path d="M246.53333333 379.36666667L142.43333333 118.66666667c-6.8-16.9 2.4-36 19.8-41.3l107.9-32.9c14.4-4.4 29.7 2.5 36 16.2l13.2 28.8c7.5 16.3-0.9 35.4-17.9 41l-73.7 24.3c-6.9 2.3-10.5 9.9-7.8 16.6L290.33333333 350.96666667c2.1 5.4-0.5 11.4-5.9 13.6l-37.9 14.8z"/>
+
+        <path d="M211.53333333 379.36666667m-84.8 0a84.8 84.8 0 1 0 169.6 0 84.8 84.8 0 1 0-169.6 0Z"/>
+    </symbol>
+    <symbol id="icon-forward" viewBox="0 0 576 512">
+        <path d="M371.7 43.1C360.1 32 343 28.9 328.3 35.2S304 56 304 72l0 136.3-172.3-165.1C120.1 32 103 28.9 88.3 35.2S64 56 64 72l0 368c0 16 9.6 30.5 24.3 36.8s31.8 3.2 43.4-7.9L304 303.7 304 440c0 16 9.6 30.5 24.3 36.8s31.8 3.2 43.4-7.9l192-184c7.9-7.5 12.3-18 12.3-28.9s-4.5-21.3-12.3-28.9l-192-184z"/>
+    </symbol>
+</svg>
+
+  
+  <link rel="stylesheet" href="/css/custom_home.min.27c85cacc6ddafc8e382aa1b04f29305d31b749f1f49d35e65e751b0dbe2cafd.css"><div class="bg-bird-layer">
     
 </div><script type="module" src="/js/mainbg.js"></script>
-<script type="module" src="/js/home-svg-anime.js"></script>
+  <script type="module" src="/js/home-svg-anime.js"></script>
 
 
 
@@ -153,289 +173,292 @@
 <body class="list" id="top">
     
         <noscript>
-    <style>
-        #intro-overlay {
-            display: none !important;
-        }
-    </style>
-    <div style="padding:1em; color: gray; text-align:center;">
-        JavaScript is disabled. JavaScript已被禁用。
-    </div>
+  <style>
+    #intro-overlay {
+      display: none !important;
+    }
+  </style>
+  <div style="padding: 1em; color: gray; text-align: center">
+    JavaScript is disabled. JavaScript已被禁用。
+  </div>
 </noscript>
 
 <div id="intro-overlay">
-    <video id="introVideo" autoplay muted playsinline preload="auto"
-        poster='/media/poster-horizontal.webp'>
-        欢迎来到我的野生动物世界。您的浏览器不支持 video 标签。
-    </video>
-    <div id="button-layout">
-        <button id="enter-button" type="button" onclick="skipIntro()">
-            <img id="skip-icon" src='/media/skip.png' alt="skip Icon">
-            跳过 / Skip</button>
-        <button id="mute-toggle" type="button">
-            <img id="mute-icon" src='/media/mute.png' alt="mute Icon">
-            <img id="unmute-icon" src='/media/unmute.png' alt="unmute Icon">
-        </button>
-    </div>
-    <div id="domain-name">BeholdWild.org</div>
+  <video
+    id="introVideo"
+    autoplay
+    muted
+    playsinline
+    preload="auto"
+    poster='/media/poster-horizontal.webp'
+  >
+    欢迎来到我的野生动物世界。您的浏览器不支持 video 标签。
+  </video>
+  <div id="button-layout">
+    <button id="enter-button" type="button" onclick="skipIntro()">
+      <svg class="welcome-icon"><use href="#icon-forward" /></svg>
+      跳过 / Skip
+    </button>
+    <button id="mute-toggle" type="button">
+      <svg class="welcome-icon" id="mute-icon">
+        <use href="#icon-musicoff" />
+      </svg>
+      <svg class="welcome-icon" id="unmute-icon">
+        <use href="#icon-musicon" />
+      </svg>
+    </button>
+  </div>
+  <div id="domain-name">BeholdWild.org</div>
 </div>
 
 <style>
-    #intro-overlay {
-        position: fixed;
-        inset: 0;
-        z-index: 9999;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        background: url('/media/intro_bg.webp'),
-        linear-gradient(to bottom, rgb(40, 40, 40), rgb(110, 110, 110));
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+  #intro-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: url('/media/intro_bg.webp'),
+      linear-gradient(to bottom, rgb(40, 40, 40), rgb(110, 110, 110));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
-    #introVideo {
-        object-fit: cover;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        border-radius: 10px;
-        margin-top: 5vh;
-        transition: opacity 0.8s ease;
-    }
+  #introVideo {
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 5vh;
+    transition: opacity 0.8s ease;
+  }
+  .welcome-icon {
+    width: 1.2em;
+    height: 1.2em;
+    fill: rgb(255, 255, 255, 0.6);
+  }
 
-    #button-layout {
-        margin-top: 2vh;
-        gap: 10px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen, Ubuntu, Cantarell, open sans, helvetica neue, sans-serif;
-    }
+  #button-layout {
+    margin-top: 2vh;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen,
+      Ubuntu, Cantarell, open sans, helvetica neue, sans-serif;
+  }
 
-    #mute-toggle {
-        color: rgb(255, 255, 255, 0.6);
-        background: rgba(0, 0, 0, 0.3);
-        border: none;
-        cursor: pointer;
-        border-radius: 6px;
-        transition: opacity 0.8s ease;
-        z-index: 10000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 9px 9px;
-    }
+  #mute-toggle {
+    color: rgb(255, 255, 255, 0.6);
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: opacity 0.8s ease;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 9px;
+  }
 
-    #mute-toggle img {
-        width: 1.2em;
-        height: 1.2em;
-        opacity: 0.7;
-    }
+  #enter-button {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    color: rgb(255, 255, 255, 0.6);
+    padding: 8px 18px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: opacity 0.8s ease;
+    z-index: 10000;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
 
-    #enter-button {
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        background: rgba(0, 0, 0, 0.3);
-        color: rgb(255, 255, 255, 0.6);
-        padding: 8px 18px;
-        font-size: 0.9rem;
-        border-radius: 6px;
-        cursor: pointer;
-        transition: opacity 0.8s ease;
-        z-index: 10000;
-        font-weight: 600;
-        letter-spacing: 1px;
-    }
+  #enter-button .welcome-icon {
+    margin-right: 0.5em;
+  }
 
-    #enter-button img {
-        width: 1.2em;
-        height: 1.2em;
-        margin-right: 0.5em;
-        vertical-align: baseline;
-        opacity: 0.7;
-    }
+  #domain-name {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: rgb(255, 255, 255, 0.6);
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: sans-serif, monospace;
+    letter-spacing: 1px;
+    transition: opacity 0.8s ease;
+    z-index: 10000;
+  }
 
-    #domain-name {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        color: rgb(255, 255, 255, 0.6);
-        font-size: 1rem;
-        font-weight: bold;
-        font-family: sans-serif, monospace;
-        letter-spacing: 1px;
-        transition: opacity 0.8s ease;
-        z-index: 10000;
-    }
-
-    .fade-out {
-        opacity: 0;
-    }
+  .fade-out {
+    opacity: 0;
+  }
 </style>
 
 <script>
-    const seenIntro = sessionStorage.getItem('seenIntro');
-    const overlay = document.getElementById('intro-overlay');
-    const video = document.getElementById('introVideo');
-    const muteToggle = document.getElementById('mute-toggle');
-    const mutedIcon = document.getElementById('mute-icon');
-    const unmutedIcon = document.getElementById('unmute-icon');
+  const seenIntro = sessionStorage.getItem("seenIntro");
+  const overlay = document.getElementById("intro-overlay");
+  const video = document.getElementById("introVideo");
+  const muteToggle = document.getElementById("mute-toggle");
+  const mutedIcon = document.getElementById("mute-icon");
+  const unmutedIcon = document.getElementById("unmute-icon");
 
-    mutedIcon.style.display = 'inline';
-    unmutedIcon.style.display = 'none';
+  mutedIcon.style.display = "inline";
+  unmutedIcon.style.display = "none";
 
-    function isIOS() {
-        const ua = navigator.userAgent;
-        const isIphoneOrIpod = /iPhone|iPod/.test(ua);
-        const isIPad = /iPad/.test(ua) ||
-            (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-        return isIphoneOrIpod || isIPad;
-    }
+  function isIOS() {
+    const ua = navigator.userAgent;
+    const isIphoneOrIpod = /iPhone|iPod/.test(ua);
+    const isIPad =
+      /iPad/.test(ua) ||
+      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    return isIphoneOrIpod || isIPad;
+  }
 
-    function hideIntro() {
-        overlay.style.display = 'none';
-    }
+  function hideIntro() {
+    overlay.style.display = "none";
+  }
 
-    function skipIntro() {
-        video.classList.add('fade-out');
-        document.getElementById('enter-button').classList.add('fade-out');
-        document.getElementById('mute-toggle').classList.add('fade-out');
-        document.getElementById('domain-name').classList.add('fade-out');
-        if (!isIOS()) {
-            if (!video.muted && video.volume > 0.01) {
-                fadeOutVolume(video);
-            }
-        }
-        else {
-            video.muted = true;
-        }
-
-        
-        setTimeout(() => {
-            sessionStorage.setItem('seenIntro', 'true');
-            hideIntro();
-        }, 1000);
-    }
-
-    function fadeInVolume(video, duration = 1000) {
-        let step = 0.05;
-        video.volume = 0.0;
-        const interval = setInterval(() => {
-            if (video.volume < 1.0) {
-                video.volume = Math.min(1.0, video.volume + step);
-            } else {
-                clearInterval(interval);
-            }
-        }, duration * step); 
-    }
-
-    function fadeOutVolume(video, duration = 1000) {
-        let step = 0.05;
-        video.volume = 1.0;
-        const interval = setInterval(() => {
-            if (video.volume > 0) {
-                video.volume = Math.max(0, video.volume - step);
-            } else {
-                clearInterval(interval);
-            }
-        }, duration * step); 
-    }
-
-    function playvideo() {
-        
-        const isPortrait = window.matchMedia("(orientation: portrait)").matches;
-        const videoSrc = isPortrait
-            ? '\/media\/intro-vertical.mp4'
-            : '\/media\/intro-horizontal.mp4';
-
-        const posterSrc = isPortrait
-            ? '\/media\/poster-vertical.webp'
-            : '\/media\/poster-horizontal.webp';
-        
-
-        const screenRatio = window.innerWidth / window.innerHeight;
-
-        if (!isPortrait) {
-            video.style.aspectRatio = "16/9";
-            video.style.width = "90vw";
-            video.style.maxHeight = "90vh";
-
-            if (screenRatio > 1.7) {
-                video.style.maxHeight = "85vh";
-            }
-        }
-        else {
-            video.style.aspectRatio = "2/3";
-            video.style.maxHeight = "85vh";
-            if (window.matchMedia("(max-width: 480px)").matches) {
-                video.style.width = "93vw";
-            } else {
-                video.style.width = "90vw";
-            }
-
-        }
-
-        video.src = videoSrc;
-        video.setAttribute('poster', posterSrc);
-
-        
-        while (video.firstChild) {
-            video.removeChild(video.firstChild);
-        }
-
-        
-        const source = document.createElement('source');
-        source.setAttribute('src', videoSrc);
-        source.setAttribute('type', 'video/mp4');
-        video.appendChild(source);
-
-        
-        
-        
-        
-
-        try {
-            video.load();
-            video.play(); 
-        }
-        catch (e) {
-            console.warn('Autoplay failed, maybe interaction needed:', e);
-        }
-
-    }
-
-    muteToggle.addEventListener('click', () => {
-        if (video.muted) {
-            
-            video.muted = false;
-            if (!isIOS()) {
-                fadeInVolume(video);
-            }
-            mutedIcon.style.display = 'none';
-            unmutedIcon.style.display = 'inline';
-
-        } else {
-            video.muted = true;
-            mutedIcon.style.display = 'inline';
-            unmutedIcon.style.display = 'none';
-        }
-    });
-
-    if (seenIntro) {
-        hideIntro();
+  function skipIntro() {
+    video.classList.add("fade-out");
+    document.getElementById("enter-button").classList.add("fade-out");
+    document.getElementById("mute-toggle").classList.add("fade-out");
+    document.getElementById("domain-name").classList.add("fade-out");
+    if (!isIOS()) {
+      if (!video.muted && video.volume > 0.01) {
+        fadeOutVolume(video);
+      }
     } else {
-        playvideo();
-        video.addEventListener('ended', () => {
-            sessionStorage.setItem('seenIntro', 'true');
-            hideIntro();
-        });
+      video.muted = true;
     }
+
+    
+    setTimeout(() => {
+      sessionStorage.setItem("seenIntro", "true");
+      hideIntro();
+    }, 1000);
+  }
+
+  function fadeInVolume(video, duration = 1000) {
+    let step = 0.05;
+    video.volume = 0.0;
+    const interval = setInterval(() => {
+      if (video.volume < 1.0) {
+        video.volume = Math.min(1.0, video.volume + step);
+      } else {
+        clearInterval(interval);
+      }
+    }, duration * step); 
+  }
+
+  function fadeOutVolume(video, duration = 1000) {
+    let step = 0.05;
+    video.volume = 1.0;
+    const interval = setInterval(() => {
+      if (video.volume > 0) {
+        video.volume = Math.max(0, video.volume - step);
+      } else {
+        clearInterval(interval);
+      }
+    }, duration * step); 
+  }
+
+  function playvideo() {
+    
+    const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+    const videoSrc = isPortrait
+      ? '\/media\/intro-vertical.mp4'
+      : '\/media\/intro-horizontal.mp4';
+
+    const posterSrc = isPortrait
+      ? '\/media\/poster-vertical.webp'
+      : '\/media\/poster-horizontal.webp';
+    
+
+    const screenRatio = window.innerWidth / window.innerHeight;
+
+    if (!isPortrait) {
+      video.style.aspectRatio = "16/9";
+      video.style.width = "90vw";
+      video.style.maxHeight = "90vh";
+
+      if (screenRatio > 1.7) {
+        video.style.maxHeight = "85vh";
+      }
+    } else {
+      video.style.aspectRatio = "2/3";
+      video.style.maxHeight = "85vh";
+      if (window.matchMedia("(max-width: 480px)").matches) {
+        video.style.width = "93vw";
+      } else {
+        video.style.width = "90vw";
+      }
+    }
+
+    video.src = videoSrc;
+    video.setAttribute("poster", posterSrc);
+
+    
+    while (video.firstChild) {
+      video.removeChild(video.firstChild);
+    }
+
+    
+    const source = document.createElement("source");
+    source.setAttribute("src", videoSrc);
+    source.setAttribute("type", "video/mp4");
+    video.appendChild(source);
+
+    
+    
+    
+    
+
+    try {
+      video.load();
+      video.play(); 
+    } catch (e) {
+      console.warn("Autoplay failed, maybe interaction needed:", e);
+    }
+  }
+
+  muteToggle.addEventListener("click", () => {
+    if (video.muted) {
+      
+      video.muted = false;
+      if (!isIOS()) {
+        fadeInVolume(video);
+      }
+      mutedIcon.style.display = "none";
+      unmutedIcon.style.display = "inline";
+    } else {
+      video.muted = true;
+      mutedIcon.style.display = "inline";
+      unmutedIcon.style.display = "none";
+    }
+  });
+
+  if (seenIntro) {
+    hideIntro();
+  } else {
+    playvideo();
+    video.addEventListener("ended", () => {
+      sessionStorage.setItem("seenIntro", "true");
+      hideIntro();
+    });
+  }
 </script>
+
     
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
