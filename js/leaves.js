@@ -1,8 +1,12 @@
 let srcImage = new Image();
-srcImage.src = "/images/resources/sakura.webp";
+srcImage.src = "/images/resources/ginkgo.webp";
 
+let frameWidth;
+let frameHeight;
+let frameNum = 3;
 let cvs = document.getElementById("canvas-light");
-cvs.style.background = "radial-gradient(1600px at 50% -20%, hsl(338, 77%, 94%) 10%, #fff8f0 60%, #efefef 100%)";
+cvs.style.background =
+  "radial-gradient(1600px at 50% -20%, hsl(45, 95%, 85%) 5%, hsl(38, 100%, 85%) 20%, hsl(42, 95%, 92%) 40%, #fff8e1 70%, #f3f3f3 100%)";
 let winWidth;
 let winHeight;
 let imgNum;
@@ -12,9 +16,10 @@ let running = false;
 let loaded = false;
 let oneDeg = Math.PI / 180;
 
-class Sakura {
+class Ginkgo {
   constructor(img) {
     this.img = img;
+    this.index = 0;
     this.x = 0;
     this.y = 0;
     this.w = 0;
@@ -33,36 +38,40 @@ class Sakura {
   static randInterval_float(min, max) {
     return Math.random() * (max - min) + min;
   }
+  static randInterval_int(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+  }
   static tuneYpos(maxY) {
     let ret;
     let yRatio = maxY / 5.0;
     let yPos = [0, yRatio, yRatio * 2, yRatio * 3, yRatio * 4];
     let rand = Math.random();
     if (rand < 0.05) {
-      ret = Sakura.randInterval_float(yPos[3], yPos[4]);
+      ret = Ginkgo.randInterval_float(yPos[3], yPos[4]);
     } else if (rand >= 0.05 && rand < 0.2) {
-      ret = Sakura.randInterval_float(yPos[2], yPos[3]);
+      ret = Ginkgo.randInterval_float(yPos[2], yPos[3]);
     } else if (rand >= 0.2 && rand < 0.5) {
-      ret = Sakura.randInterval_float(yPos[1], yPos[2]);
+      ret = Ginkgo.randInterval_float(yPos[1], yPos[2]);
     } else {
-      ret = Sakura.randInterval_float(yPos[0], yPos[1]);
+      ret = Ginkgo.randInterval_float(yPos[0], yPos[1]);
     }
     return ret;
   }
 
   initial() {
-    this.x = Sakura.randInterval_float(0, winWidth);
-    this.y = Sakura.tuneYpos(winHeight);
-    this.w = Sakura.randInterval_float(0, 6);
+    this.index = Ginkgo.randInterval_int(0, frameNum);
+    this.x = Ginkgo.randInterval_float(0, winWidth);
+    this.y = Ginkgo.tuneYpos(winHeight);
+    this.w = Ginkgo.randInterval_float(0, 6);
 
-    this.dx = Sakura.randInterval_float(-0.8, 0.8);
-    this.dy = Sakura.randInterval_float(0.4, 1.0);
-    this.dw = Sakura.randInterval_float(-oneDeg, oneDeg)*0.5;
+    this.dx = Ginkgo.randInterval_float(-0.8, 0.8);
+    this.dy = Ginkgo.randInterval_float(0.4, 1.0);
+    this.dw = Ginkgo.randInterval_float(-oneDeg, oneDeg) * 0.5;
 
-    this.size = Sakura.randInterval_float(5, 20);
+    this.size = Ginkgo.randInterval_float(15, 30);
     this.opacity = 0.1;
-    this.opacityRate = Sakura.randInterval_float(0.002, 0.004);
-    this.opacityThre = Sakura.randInterval_float(0.4, 0.9);
+    this.opacityRate = Ginkgo.randInterval_float(0.002, 0.004);
+    this.opacityThre = Ginkgo.randInterval_float(0.4, 0.9);
     this.opacityState = true;
   }
 
@@ -73,6 +82,10 @@ class Sakura {
     ctx.globalAlpha = this.opacity;
     ctx.drawImage(
       this.img,
+      this.index * frameWidth,
+      0,
+      frameWidth,
+      frameHeight,
       -this.size / 2,
       -this.size / 2,
       this.size,
@@ -124,7 +137,7 @@ function initialCanvas() {
 function createImgObj() {
   imgList = [];
   for (let i = 0; i < imgNum; i++) {
-    imgList.push(new Sakura(srcImage));
+    imgList.push(new Ginkgo(srcImage));
   }
 }
 
@@ -170,6 +183,8 @@ observer.observe(document.body, {
 });
 
 srcImage.onload = () => {
+  frameWidth = srcImage.width / frameNum;
+  frameHeight = srcImage.height;
   loaded = true;
   updateAnimationState();
 };
