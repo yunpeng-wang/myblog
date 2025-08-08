@@ -47,14 +47,14 @@ class MainDraw {
     return color + blue;
   }
   static cometChance(x) {
-    return Math.floor(1e3 * Math.random()) + 1 < 10 * x; // possibility p(x*10 / 1000) return true
+    return Math.floor(1e3 * Math.random()) + 1 < 10 * x; // possibility p(x / 100) return true
   }
   static getRandom(low, high) {
     return Math.random() * (high - low) + low; // range: [low, high)
   }
 
   initial() {
-    this.giant = MainDraw.cometChance(3);
+    this.giant = MainDraw.cometChance(5);
     this.comet = !this.giant && showComet && MainDraw.cometChance(10);
     this.x = MainDraw.getRandom(10, winWidth);
     this.y = MainDraw.getRandom(0, winHeight);
