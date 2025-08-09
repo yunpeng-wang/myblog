@@ -2,7 +2,8 @@ let srcImage = new Image();
 srcImage.src = "/images/resources/sakura.webp";
 
 let cvs = document.getElementById("canvas-light");
-cvs.style.background = "radial-gradient(1600px at 50% -20%, hsl(338, 77%, 94%) 10%, #fff8f0 60%, #efefef 100%)";
+cvs.style.background =
+  "radial-gradient(1600px at 50% -20%, hsl(338, 77%, 94%) 10%, #fff8f0 60%, #efefef 100%)";
 let winWidth;
 let winHeight;
 let imgNum;
@@ -57,7 +58,7 @@ class Sakura {
 
     this.dx = Sakura.randInterval_float(-0.8, 0.8);
     this.dy = Sakura.randInterval_float(0.4, 1.0);
-    this.dw = Sakura.randInterval_float(-oneDeg, oneDeg)*0.5;
+    this.dw = Sakura.randInterval_float(-oneDeg, oneDeg) * 0.5;
 
     this.size = Sakura.randInterval_float(5, 20);
     this.opacity = 0.1;
@@ -158,6 +159,9 @@ function updateAnimationState() {
 }
 
 // #start Main code
+const ro = new ResizeObserver(initialCanvas);
+ro.observe(document.documentElement);
+
 window.addEventListener("resize", initialCanvas, false);
 initialCanvas();
 createImgObj();

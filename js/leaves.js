@@ -171,6 +171,9 @@ function updateAnimationState() {
 }
 
 // #start Main code
+const ro = new ResizeObserver(initialCanvas);
+ro.observe(document.documentElement);
+
 window.addEventListener("resize", initialCanvas, false);
 initialCanvas();
 createImgObj();
