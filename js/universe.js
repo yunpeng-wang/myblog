@@ -14,7 +14,7 @@ let colorComet = "226,225,224";
 let colorStars = "225,197,"; // random blue channel
 let stars;
 
-class MainDraw {
+class Universe {
   constructor() {
     this.giant = false;
     this.comet = false;
@@ -54,25 +54,25 @@ class MainDraw {
   }
 
   initial() {
-    this.giant = MainDraw.cometChance(5);
-    this.comet = !this.giant && showComet && MainDraw.cometChance(10);
-    this.x = MainDraw.getRandom(10, winWidth);
-    this.y = MainDraw.getRandom(0, winHeight);
-    this.r = MainDraw.getRandom(1.1, 2.6);
+    this.giant = Universe.cometChance(5);
+    this.comet = !this.giant && showComet && Universe.cometChance(10);
+    this.x = Universe.getRandom(10, winWidth);
+    this.y = Universe.getRandom(0, winHeight);
+    this.r = Universe.getRandom(1.1, 2.6);
     let low = randLow;
-    let ci = MainDraw.bool2int(this.comet);
+    let ci = Universe.bool2int(this.comet);
     this.dx =
-      MainDraw.getRandom(low, 6 * low) +
-      ci * low * MainDraw.getRandom(50, 120) +
+      Universe.getRandom(low, 6 * low) +
+      ci * low * Universe.getRandom(50, 120) +
       2 * low;
     this.dy =
-      -MainDraw.getRandom(low, 6 * low) -
-      ci * low * MainDraw.getRandom(50, 120);
+      -Universe.getRandom(low, 6 * low) -
+      ci * low * Universe.getRandom(50, 120);
     this.fadingOut = null;
     this.fadingIn = true;
     this.opacity = 0;
-    this.opacityTresh = MainDraw.getRandom(0.2, 1 - 0.4 * ci);
-    this.do = MainDraw.getRandom(5e-4, 0.002) + 0.001 * ci;
+    this.opacityTresh = Universe.getRandom(0.2, 1 - 0.4 * ci);
+    this.do = Universe.getRandom(5e-4, 0.002) + 0.001 * ci;
   }
 
   fadeIn() {
@@ -97,13 +97,13 @@ class MainDraw {
   draw(ctx) {
     ctx.beginPath();
     if (this.giant) {
-      ctx.fillStyle = MainDraw.concatRGB(colorGiant, this.opacity);
+      ctx.fillStyle = Universe.concatRGB(colorGiant, this.opacity);
       ctx.arc(this.x, this.y, 2, 0, 2 * Math.PI);
     } else if (this.comet) {
-      ctx.fillStyle = MainDraw.concatRGB(colorComet, this.opacity);
+      ctx.fillStyle = Universe.concatRGB(colorComet, this.opacity);
       ctx.arc(this.x, this.y, 1.5, 0, 2 * Math.PI);
       for (let t = 0; t < 30; t++) {
-        ctx.fillStyle = MainDraw.concatRGB(
+        ctx.fillStyle = Universe.concatRGB(
           colorComet,
           this.opacity * (1 - t / 20)
         );
@@ -116,8 +116,8 @@ class MainDraw {
         ctx.fill();
       }
     } else {
-      ctx.fillStyle = MainDraw.concatRGB(
-        MainDraw.randColorStars(colorStars),
+      ctx.fillStyle = Universe.concatRGB(
+        Universe.randColorStars(colorStars),
         this.opacity
       );
       ctx.rect(this.x, this.y, this.r, this.r);
@@ -150,7 +150,7 @@ function initialCanvas() {
 function addStars() {
   stars = [];
   for (let i = 0; i < starsNum; i++) {
-    stars[i] = new MainDraw();
+    stars[i] = new Universe();
   }
 }
 
